@@ -83,7 +83,7 @@ body {
 /*------------END------------*/
 
 /*adjusting navabr elements on small screens*/
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 901px) {
     #navbar {
         justify-content: space-between;
         padding: 0;
@@ -159,7 +159,7 @@ body {
 /* adjusting font size on small screens of the "about" contaienr*/
 /*---------------START--------------*/
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 769px) {
     #how-it-works {
         padding: 1.6rem 0;
     }
@@ -188,6 +188,7 @@ body {
 #plans-container {
     background-color: rgb(238, 238, 238);
     text-align: center;
+    display: grid;
 }
 
 .card-container img {
@@ -244,9 +245,8 @@ figcaption span {
 /* small screens (phones)*/
 /*--------------START--------------*/
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 635px) {
     #plans-container {
-        display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr) 0.2fr;
         padding: 9% 2%;
@@ -287,6 +287,41 @@ figcaption span {
 
 /*--------------END---------------*/
 
+/*adjusting and different style for the cards on tablets and meduim screens*/
+/*-----------------------START-----------------------*/
+
+@media screen and (min-width: 635px) {
+    #plans-container {
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: 0.5fr;
+        grid-gap: 28px;
+        padding: 20px 0;
+    }
+
+    #card-1 {
+        grid-area: 1 / 2 / 1/ 6;
+    }
+
+    #card-2 {
+        grid-area: 1 / 6 / 1 / 10;
+    }
+
+    #card-3 {
+        grid-area: 1 / 10 / 1 / 14;
+    }
+
+    figcaption {
+        font-size: 15px;
+        padding: 17px;
+    }
+
+    .card-container .card-H h6 {
+        font-size: 17px;
+    }
+}
+
+/*--------------------END----------------------*/
+
 
 /*GENERAL STYLING FOR THE FORM*/
 /*---------STRAT--------*/
@@ -295,6 +330,7 @@ figcaption span {
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
+    padding: 15% 5%;
     background-color: deeppink;
 }
 
@@ -307,6 +343,8 @@ figcaption span {
     background: no-repeat;
     box-sizing: border-box;
     margin: 0px;
+    padding: 22px;
+    /*padding: 3.5%;*/
     box-shadow: 0 0 1.6em rgb(68 68 68);
     width: 100%;
 }
@@ -314,6 +352,8 @@ figcaption span {
 #buy-form div {
     width: 100%;
     height: auto;
+    padding: 6.2% 4%;
+    text-align: center;
 }
 
 label {
@@ -323,6 +363,7 @@ label {
 
 #buy-form-section input {
     border: 2px solid transparent;
+    border-radius: 10px;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -346,7 +387,7 @@ label {
     font-weight: bolder;
     border-radius: 1.5em;
     background-color: #000;
-    color: white;
+    color: #ff0099;
     padding: 0.5em;
     transition: all 0.5s ease-out;
     -webkit-transition: all 0.5s ease-out;
@@ -356,9 +397,12 @@ label {
 }
 
 #buy-form #submit-btn:hover {
-    background-color: white;
-    color: #ff0099;
-    border: 2px solid black;
+    transform: translateY(-5px);
+    box-shadow: 0 10px  10px 0 #ff0099;
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
 }
 
 /*------------------END------------------*/
@@ -367,29 +411,60 @@ label {
 /*adjusting form container on small screens*/
 /*--------------START------------*/
 
-@media screen and (max-width: 1025px) {
-    #buy-form-section {
-        padding: 15% 5%;
-    }
-
-    #buy-form {
-        padding: 3.5%;
-    }
-
-    #buy-form div {
-        padding: 6.2% 4%;
-    }
-
-    #buy-form input {
-        border-radius: 15px;
+@media screen and (max-width: 421px) {
+    #buy-form div input {
+        height: 35px;
     }
 }
 
 /*--------------END------------*/
 
 
-/*styling footer*/
+/*adjusting form container on tablets and medium screens*/
 /*--------------START------------*/
+
+@media screen and (min-width: 421px) {
+    #buy-form {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 6px;
+    }
+
+    #buy-form div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .half-spaned-element {
+        grid-column: span 3;
+    }
+
+    .full-spaned-element {
+        grid-column: span 6;
+    }
+
+    #buy-form div input {
+        width: 102%;
+        height: 47px;
+    }
+
+    #buy-form div label {
+        font-size: 17px;
+    }
+
+    #buy-form #submit-btn {
+        width: 100%;
+        height: auto;
+        grid-column: 2 / 6;
+    }
+}
+
+/*--------------END------------*/
+
+/*general styling footer*/
+/*--------------START------------*/
+
 #footer {
     background-color: #000;
     color: #ffffff;
@@ -416,10 +491,22 @@ label {
 /*footer in small screens*/
 /*-----------------STRAT----------------*/
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 511px) {
     #footer {
         padding: 25px;
     }
 }
 
 /*--------------END------------*/
+
+
+/*adjusting padding and font size on tablets and medium screens*/
+/*---------------------------START-----------------------*/
+
+@media screen and (min-width: 511px) {
+    #footer {
+        padding: 30px;
+    }
+}
+
+/*---------------------------END-----------------------*/
