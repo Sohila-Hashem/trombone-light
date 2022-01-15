@@ -123,7 +123,7 @@ body {
 
 @media screen and (min-width: 1201px) {
     #navbar #menu-list a {
-        font-size: 20px;
+        font-size: 19px;
         margin: 0px 12px;
     }
 }
@@ -149,8 +149,8 @@ body {
 #header-img {
     width: 100%;
     height: 100%;
-    filter: grayscale(0.6) brightness(0.7);
-    -webkit-filter: /*grayscale(0.6)*/ brightness(0.7);
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
 }
 
 /*------------END------------*/
@@ -358,13 +358,13 @@ figcaption span {
 /*------------------------START-----------------------------*/
 
 @media screen and (min-width: 1439px) {
-        figcaption {
-        font-size: 20px;
+    figcaption {
+        font-size: 18px;
         padding: 25px;
     }
 
     .card-container .card-H h5 {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
@@ -546,7 +546,7 @@ label {
     }
 
     #buy-form-section h1 {
-        background-image:  url(../images/form-side-background2.jpg);
+        background-image: url(../images/form-side-background2.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -559,7 +559,7 @@ label {
         color: #FFF;
         z-index: 1;
         font-size: revert;
-}
+    }
 
     #buy-form {
         grid-template-columns: repeat(6, 1fr);

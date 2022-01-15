@@ -13,8 +13,3 @@ burger.addEventListener('click', (e) => {
         menuItem.classList.toggle('menu-item')
     })
 })
-
-//turning off the submit action for now
-// submitBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-// })
