@@ -15,6 +15,6 @@ burger.addEventListener('click', (e) => {
 })
 
 //turning off the submit action for now
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-})
+// submitBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+// })

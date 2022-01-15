@@ -105,11 +105,36 @@ body {
 }
 
 /*-----------END------------*/
+/*adjusting nav links on large screens*/
+/*----------START---------*/
+
+@media screen and (min-width: 901px) and (max-width: 1201px) {
+    #navbar #menu-list a {
+        font-size: 19px;
+        margin: 0px 12px;
+    }
+}
+
+/*----------END---------*/
+
+
+/*adjusting nav links on X large screens*/
+/*----------START---------*/
+
+@media screen and (min-width: 1201px) {
+    #navbar #menu-list a {
+        font-size: 20px;
+        margin: 0px 12px;
+    }
+}
+
+/*----------END---------*/
 
 /*adjusting header background image*/
 /*----------START---------*/
 
 #img-container {
+    position: relative;
     height: auto;
     width: 100%;
     padding: 0px;
@@ -124,21 +149,46 @@ body {
 #header-img {
     width: 100%;
     height: 100%;
-    filter: grayscale(0.6);
-    -webkit-filter: grayscale(0.6);
+    filter: grayscale(0.6) brightness(0.7);
+    -webkit-filter: /*grayscale(0.6)*/ brightness(0.7);
 }
 
 /*------------END------------*/
 
 
+/*adjusting header image caption*/
+/*-------------------START--------------------*/
+
+#header-img-caption {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+    color: #fff;
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+#header-img-caption h1 {
+    margin: 0;
+}
+
+/*-------------------END--------------------*/
+
+
 /*general styling for the how it works section*/
 /*----------START------------*/
 #how-it-works {
+    padding: 1.6rem 0;
     background-color: rgb(0, 0, 0);
     box-sizing: border-box;
     color: rgb(255, 255, 255);
 }
-
 
 
 #iframe-container iframe {
@@ -146,42 +196,33 @@ body {
     padding: 2% 15%;
     padding-top: 6%;
     padding-bottom: 6%;
-    filter: brightness(0.6);
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
 }
+
+#iframe-description {
+    padding: 0 7%;
+    padding-top: 60px;
+    padding-bottom: 4%;
+}
+
 
 #iframe-description h1 {
     color: #ff0099;
 }
 
 
-
-
 /* adjusting font size on small screens of the "about" contaienr*/
 /*---------------START--------------*/
 
 @media screen and (max-width: 769px) {
-    #how-it-works {
-        padding: 1.6rem 0;
-    }
-
-    #iframe-description {
-        padding: 0 7%;
-        padding-top: 8%;
-        padding-bottom: 4%;
-    }
-
     #iframe-description p {
-        font-size: 0.73em;
+        font-size: 11px;
     }
 }
 
 /*-------------END-------------*/
 
-
-/* adjusting font size on large screens*/
-
-
-/*-------------END-------------*/
 
 /*PLANS CONTAINER GENERAL STYLING*/
 /*--------------START------------*/
@@ -198,7 +239,7 @@ body {
 
 .card-container {
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 10px rgb(53, 53, 53);
+    box-shadow: 0px 0px 10px rgb(46, 46, 46);
     box-sizing: border-box;
     padding: 0;
     background-color: rgb(207 207 207);
@@ -213,7 +254,7 @@ body {
 
 .card-container .card-H {
     font-weight: bold;
-    border-bottom: 0.1rem solid #000000;
+    border-bottom: 0.1rem solid #000;
     padding: 0.6em;
     width: 100%;
     height: auto;
@@ -223,12 +264,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0;
 }
 
 
-.card-container .card-H h6 {
+.card-container .card-H h5 {
     color: #be0072;
-    font-size: 1.3rem;
     font-weight: 900;
     margin: 0px;
 }
@@ -249,7 +290,7 @@ figcaption span {
     #plans-container {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr) 0.2fr;
-        padding: 9% 2%;
+        padding: 10% 11%;
         grid-row-gap: 3%;
     }
 
@@ -258,13 +299,8 @@ figcaption span {
         margin: 0 auto;
     }
 
-    .card-container figure {
-        margin: 0 0 0rem
-    }
-
     .card-container figcaption {
-        font-size: 14px;
-        padding: 1.8rem
+        padding: 30px;
     }
 
     figcaption span {
@@ -295,7 +331,7 @@ figcaption span {
         grid-template-columns: repeat(14, 1fr);
         grid-template-rows: 0.5fr;
         grid-gap: 28px;
-        padding: 20px 0;
+        padding: 60px 0;
     }
 
     #card-1 {
@@ -312,15 +348,27 @@ figcaption span {
 
     figcaption {
         font-size: 15px;
-        padding: 17px;
-    }
-
-    .card-container .card-H h6 {
-        font-size: 17px;
+        padding: 25px;
     }
 }
 
 /*--------------------END----------------------*/
+
+/*adjusting figcaption and font size of cards on meduim and large screens*/
+/*------------------------START-----------------------------*/
+
+@media screen and (min-width: 1439px) {
+        figcaption {
+        font-size: 20px;
+        padding: 25px;
+    }
+
+    .card-container .card-H h5 {
+        font-size: 25px;
+    }
+}
+
+/*------------------------END-----------------------------*/
 
 
 /*GENERAL STYLING FOR THE FORM*/
@@ -330,8 +378,15 @@ figcaption span {
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 15% 5%;
-    background-color: deeppink;
+    padding: 50px 6%;
+    background: linear-gradient(359deg, rgb(235, 19, 134), rgb(199, 16, 114), rgb(133, 14, 77));
+}
+
+#buy-form-section h1 {
+    font-weight: bold;
+    padding: 10px 0 45px 0;
+    text-align: center;
+    color: aliceblue;
 }
 
 #buy-form-container {
@@ -344,7 +399,6 @@ figcaption span {
     box-sizing: border-box;
     margin: 0px;
     padding: 22px;
-    /*padding: 3.5%;*/
     box-shadow: 0 0 1.6em rgb(68 68 68);
     width: 100%;
 }
@@ -352,7 +406,6 @@ figcaption span {
 #buy-form div {
     width: 100%;
     height: auto;
-    padding: 6.2% 4%;
     text-align: center;
 }
 
@@ -363,12 +416,16 @@ label {
 
 #buy-form-section input {
     border: 2px solid transparent;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 100%;
     height: auto;
     box-sizing: border-box;
     transition: all 0.3s ease-in;
     outline: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #buy-form-section input:focus {
@@ -380,25 +437,30 @@ label {
 }
 
 #buy-form #submit-btn {
-    margin: 20px auto;
-    letter-spacing: 1px;
-    outline: none;
-    border: 2px solid transparent;
-    font-weight: bolder;
-    border-radius: 1.5em;
-    background-color: #000;
-    color: #ff0099;
+    width: 172px;
     padding: 0.5em;
+    border: 2px solid transparent;
+    border-radius: 1.5em;
+    outline: none;
+    margin: 20px auto;
+    background-color: #000;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: bolder;
     transition: all 0.5s ease-out;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
+    -webkit-border-radius: 1.5em;
+    -moz-border-radius: 1.5em;
+    -ms-border-radius: 1.5em;
+    -o-border-radius: 1.5em;
 }
 
 #buy-form #submit-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px  10px 0 #ff0099;
+    box-shadow: 0 10px 10px 0 #ff0099;
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -411,9 +473,18 @@ label {
 /*adjusting form container on small screens*/
 /*--------------START------------*/
 
-@media screen and (max-width: 421px) {
+@media screen and (max-width: 471px) {
+    #buy-form {
+        padding: 10px;
+        padding-top: 35px;
+    }
+
+    #buy-form div {
+        padding: 13px;
+    }
+
     #buy-form div input {
-        height: 35px;
+        height: 33px;
     }
 }
 
@@ -423,10 +494,12 @@ label {
 /*adjusting form container on tablets and medium screens*/
 /*--------------START------------*/
 
-@media screen and (min-width: 421px) {
+@media screen and (min-width: 471px) and (max-width: 675px) {
     #buy-form {
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 6px;
+        padding: 30px;
+        padding-top: 40px;
     }
 
     #buy-form div {
@@ -434,6 +507,7 @@ label {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding: 18px 12px;
     }
 
     .half-spaned-element {
@@ -446,7 +520,7 @@ label {
 
     #buy-form div input {
         width: 102%;
-        height: 47px;
+        height: 38px;
     }
 
     #buy-form div label {
@@ -454,7 +528,74 @@ label {
     }
 
     #buy-form #submit-btn {
-        width: 100%;
+        width: 174px;
+        height: auto;
+        grid-column: 2 / 6;
+    }
+}
+
+/*--------------END------------*/
+
+
+/*another form style for meduim to large screens*/
+/*--------------START------------*/
+@media screen and (min-width: 675px) {
+    #buy-form-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    #buy-form-section h1 {
+        background-image:  url(../images/form-side-background2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #343434;
+        margin: 0;
+        padding: 60px;
+        color: #FFF;
+        z-index: 1;
+        font-size: revert;
+}
+
+    #buy-form {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 6px;
+        padding: 30px;
+        padding-top: 40px;
+        box-shadow: initial;
+    }
+
+    #buy-form div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 13px 21px;
+    }
+
+    .half-spaned-element {
+        grid-column: span 3;
+    }
+
+    .full-spaned-element {
+        grid-column: span 6;
+    }
+
+    #buy-form div input {
+        width: 102%;
+        height: 38px;
+    }
+
+    #buy-form div label {
+        font-size: 17px;
+    }
+
+    #buy-form #submit-btn {
+        width: 174px;
         height: auto;
         grid-column: 2 / 6;
     }
