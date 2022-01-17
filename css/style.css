@@ -1,3 +1,8 @@
+/*custom variables*/
+:root {
+    --header-color: #ff0099;
+}
+
 /*global styling*/
 body {
     margin: 0px;
@@ -5,14 +10,23 @@ body {
     font-family: 'Philosopher', sans-serif;
     letter-spacing: 0.1em;
     text-transform: capitalize;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
     animation-name: onload-circle-effect;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
-    background-color: rgb(238, 238, 238);
+    background: rgb(0, 0, 0);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 25px;
+}
 
 /*circle effect on load for the body*/
 @keyframes onload-circle-effect {
@@ -32,15 +46,15 @@ body {
     z-index: 5;
     width: 100%;
     height: auto;
-    background-color: #000;
+    background: #000;
 }
 
 #navbar {
     width: 100%;
     height: auto;
-    font-weight: 900;
-    background-color: transparent;
-    padding: 10px;
+    font-weight: bold;
+    background: transparent;
+    padding: 16px;
     margin: 0;
     display: flex;
     justify-content: space-evenly;
@@ -52,18 +66,19 @@ body {
 
 #navbar #menu-list a {
     text-decoration: none;
+    border: 2px solid transparent;
     color: #FFF;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
     padding: 0.7em;
     padding-left: 16px;
 }
 
 #navbar #menu-list a:hover,
 #navbar #menu-list a:focus {
-    background-color: #FFF;
-    color: #ff0099;
+    background: rgb(0, 0, 0);
+    border: 2px solid aquamarine;
+    color: white;
 }
 
 #burger {
@@ -74,7 +89,7 @@ body {
 
 #burger a {
     text-decoration: none;
-    color: #ff0099;
+    color: var(--header-color);
     font-size: 17px;
     padding: 0.6em;
     padding-right: 13px;
@@ -100,7 +115,7 @@ body {
     #menu-list {
         display: flex;
         flex-direction: column;
-        width: 115px;
+        width: 100%;
     }
 }
 
@@ -110,7 +125,7 @@ body {
 
 @media screen and (min-width: 901px) and (max-width: 1201px) {
     #navbar #menu-list a {
-        font-size: 19px;
+        font-size: 20px;
         margin: 0px 12px;
     }
 }
@@ -123,7 +138,7 @@ body {
 
 @media screen and (min-width: 1201px) {
     #navbar #menu-list a {
-        font-size: 19px;
+        font-size: 20px;
         margin: 0px 12px;
     }
 }
@@ -140,13 +155,8 @@ body {
     padding: 0px;
 }
 
-@media screen and (max-width: 425px) {
-    #img-container {
-        padding-top: 4.3vh;
-    }
-}
-
 #header-img {
+    display: block;
     width: 100%;
     height: 100%;
     filter: brightness(0.5);
@@ -162,7 +172,7 @@ body {
 #header-img-caption {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, 50%);
     -webkit-transform: translate(-50%, 50%);
@@ -178,6 +188,11 @@ body {
     margin: 0;
 }
 
+#header-img-caption span {
+    color: var(--header-color);
+    text-shadow: 0 3px 4px var(--header-color);
+}
+
 /*-------------------END--------------------*/
 
 
@@ -186,29 +201,39 @@ body {
 #how-it-works {
     padding: 1.6rem 0;
     background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
     color: rgb(255, 255, 255);
+
 }
 
+#iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
 
 #iframe-container iframe {
-    box-sizing: border-box;
-    padding: 2% 15%;
-    padding-top: 6%;
-    padding-bottom: 6%;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    right: 10%;
+    width: 80%;
+    height: 85%;
     filter: brightness(0.7);
     -webkit-filter: brightness(0.7);
 }
 
 #iframe-description {
     padding: 0 7%;
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 4%;
 }
 
 
 #iframe-description h1 {
-    color: #ff0099;
+    font-family: 'Neonderthaw', cursive;
+    color: var(--header-color);
+    text-shadow: 0 6px 10px var(--header-color);
 }
 
 
@@ -217,7 +242,7 @@ body {
 
 @media screen and (max-width: 769px) {
     #iframe-description p {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 
@@ -227,34 +252,53 @@ body {
 /*PLANS CONTAINER GENERAL STYLING*/
 /*--------------START------------*/
 #plans-container {
-    background-color: rgb(238, 238, 238);
+    background: rgb(231, 0, 164);
+    background: radial-gradient(circle, rgba(231, 0, 164, 1) 0%, rgba(45, 0, 27, 1) 100%);
     text-align: center;
     display: grid;
+}
+
+#plans-container h2 {
+    grid-area: plans-header;
+    font-family: 'Neonderthaw', cursive;
+    text-shadow: #323232 0px 6px 5px;
+    ;
+    color: #eee;
 }
 
 .card-container img {
     width: 100%;
 }
 
+#card-1 {
+    grid-area: card-1;
+}
+
+#card-2 {
+    grid-area: card-2;
+}
+
+#card-3 {
+    grid-area: card-3;
+}
 
 .card-container {
     color: rgb(0, 0, 0);
     box-shadow: 0px 0px 10px rgb(46, 46, 46);
-    box-sizing: border-box;
     padding: 0;
-    background-color: rgb(207 207 207);
+    background-color: #eee;
     transition: all 0.3s ease-in;
 }
 
 
 .card-container:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 1em 0.3em #BE0072;
+    box-shadow: 0 8px 10px 0 #000;
 }
 
 .card-container .card-H {
     font-weight: bold;
-    border-bottom: 0.1rem solid #000;
+    border-bottom: 0.1rem solid rgb(126, 0, 94);
     padding: 0.6em;
     width: 100%;
     height: auto;
@@ -268,16 +312,21 @@ body {
 }
 
 
-.card-container .card-H h5 {
-    color: #be0072;
-    font-weight: 900;
+.card-container .card-H p {
+    font-family: 'Neonderthaw', cursive;
+    font-size: 127%;
+    font-weight: bold;
     margin: 0px;
 }
 
 figcaption span {
-    color: #be0072;
     font-weight: bold;
     display: inline-block;
+    padding: 2%;
+}
+
+.card-container figcaption {
+    line-height: 23px;
 }
 
 /*--------------END---------------*/
@@ -289,9 +338,13 @@ figcaption span {
 @media screen and (max-width: 635px) {
     #plans-container {
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr) 0.2fr;
+        grid-template-rows: 0.2fr repeat(3, 1fr) 0.5fr;
         padding: 10% 11%;
         grid-row-gap: 3%;
+        grid-template-areas: "plans-header plans-header plans-header plans-header plans-header"
+            "card-1 card-1 card-1 card-1 card-1"
+            "card-2 card-2 card-2 card-2 card-2"
+            "card-3 card-3 card-3 card-3 card-3";
     }
 
     .card-container {
@@ -307,18 +360,6 @@ figcaption span {
         padding-bottom: 3%;
         font-size: 16px;
     }
-
-    #card-1 {
-        grid-area: 1 / 1 / 1 / 6;
-    }
-
-    #card-2 {
-        grid-area: 2 / 1 / 2 / 6
-    }
-
-    #card-3 {
-        grid-area: 3 / 1 / 3 / 6;
-    }
 }
 
 /*--------------END---------------*/
@@ -329,21 +370,11 @@ figcaption span {
 @media screen and (min-width: 635px) {
     #plans-container {
         grid-template-columns: repeat(14, 1fr);
-        grid-template-rows: 0.5fr;
+        grid-template-rows: 0.3fr 1fr;
         grid-gap: 28px;
         padding: 60px 0;
-    }
-
-    #card-1 {
-        grid-area: 1 / 2 / 1/ 6;
-    }
-
-    #card-2 {
-        grid-area: 1 / 6 / 1 / 10;
-    }
-
-    #card-3 {
-        grid-area: 1 / 10 / 1 / 14;
+        grid-template-areas: "plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header plans-header"
+            ". card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3 .";
     }
 
     figcaption {
@@ -363,7 +394,7 @@ figcaption span {
         padding: 25px;
     }
 
-    .card-container .card-H h5 {
+    .card-container .card-H p {
         font-size: 22px;
     }
 }
@@ -376,27 +407,29 @@ figcaption span {
 
 #buy-form-section {
     width: 100%;
-    box-sizing: border-box;
     margin: 0 auto;
     padding: 50px 6%;
-    background: linear-gradient(359deg, rgb(235, 19, 134), rgb(199, 16, 114), rgb(133, 14, 77));
+    background-color: #eee;
 }
 
-#buy-form-section h1 {
+#buy-form-section h2 {
+    font-family: 'Neonderthaw', cursive;
+    text-shadow: -2px 5px 4px rgb(14 69 62);
+    font-size: 2em;
     font-weight: bold;
-    padding: 10px 0 45px 0;
+    padding: 5%;
     text-align: center;
-    color: aliceblue;
+    color: #000;
 }
 
 #buy-form-container {
-    background-color: #343434;
+    background: rgb(100, 234, 216);
+    background: linear-gradient(0deg, rgb(78 182 167) 0%, rgb(22 85 70) 100%);
 }
 
 #buy-form {
     display: grid;
     background: no-repeat;
-    box-sizing: border-box;
     margin: 0px;
     padding: 22px;
     box-shadow: 0 0 1.6em rgb(68 68 68);
@@ -406,20 +439,24 @@ figcaption span {
 #buy-form div {
     width: 100%;
     height: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 label {
     color: white;
     font-weight: normal;
+    padding: 3%;
 }
 
 #buy-form-section input {
+    padding: 3%;
     border: 2px solid transparent;
     border-radius: 20px;
     width: 100%;
     height: auto;
-    box-sizing: border-box;
     transition: all 0.3s ease-in;
     outline: none;
     -webkit-border-radius: 20px;
@@ -537,28 +574,37 @@ label {
 /*--------------END------------*/
 
 
+/*adjusting the main form on tablets*/
+/*---------------START----------------*/
+
+@media screen and (min-width: 675px) and (max-width: 901px) {
+    #buy-form-section #buy-form-container {
+        margin: 0;
+    }
+}
+
+/*---------------END----------------*/
+
 /*another form style for meduim to large screens*/
 /*--------------START------------*/
 @media screen and (min-width: 675px) {
     #buy-form-section {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
-    #buy-form-section h1 {
-        background-image: url(../images/form-side-background2.jpg);
+    #buy-form-container {
+        display: flex;
+        margin: 0 10%;
+    }
+
+    #buy-form-section #side-form-img {
+        background-image: url(../images/form-side-img.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #343434;
-        margin: 0;
-        padding: 60px;
-        color: #FFF;
-        z-index: 1;
-        font-size: revert;
+        width: 50%;
     }
 
     #buy-form {
@@ -595,6 +641,7 @@ label {
     }
 
     #buy-form #submit-btn {
+        cursor: pointer;
         width: 174px;
         height: auto;
         grid-column: 2 / 6;
@@ -602,6 +649,7 @@ label {
 }
 
 /*--------------END------------*/
+
 
 /*general styling footer*/
 /*--------------START------------*/
@@ -612,18 +660,15 @@ label {
     text-align: center;
 }
 
-#footer::before {
+#footer p::before {
     display: block;
     content: " © 2022";
     width: 100%;
 }
 
-#footer div span {
-    display: inline-block;
-}
-
-#footer div span::first-letter {
-    color: #ff0099;
+footer p {
+    width: 60%;
+    margin: 0 auto;
 }
 
 
