@@ -7,8 +7,6 @@ This is a single responsive landing page for trombones which consists of 4 secti
 - 3 sample product cards
 - form
 
-## Url: https://sohila-samir.github.io/trombone-light/
-
 ## technologies used
 ### client side:
 - HTML5
