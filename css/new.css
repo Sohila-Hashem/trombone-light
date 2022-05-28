@@ -214,7 +214,7 @@ blockquote p, figcaption {
 
 #main-about-container::after {
     content: '';
-    background-image: url(images/undraw_handcrafts_search.png);
+    background-image: url(../images/undraw_handcrafts_search.png);
     width: 30%;
     position: absolute;
     height: 75%;
