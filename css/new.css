@@ -99,8 +99,8 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    background: rgb(174,134,37);
-    background: linear-gradient(90deg, rgba(174,134,37,1) 0%, rgba(247,239,138,1) 0%, rgba(210,172,71,1) 100%);
+    background: var(--fallback-gradient);
+    background: var(--gold-gradient);
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -214,7 +214,7 @@ blockquote p, figcaption {
 
 #main-about-container::after {
     content: '';
-    background-image: url(/images/undraw_handcrafts_search.png);
+    background-image: url(images/undraw_handcrafts_search.png);
     width: 30%;
     position: absolute;
     height: 75%;
@@ -263,8 +263,8 @@ blockquote p, figcaption {
 .section-header::before {
     position: absolute;
     content: '';
-    background: #ae8625;
-    background: linear-gradient(90deg, rgba(174,134,37,1) 0%, rgba(247,239,138,1) 0%, rgba(210,172,71,1) 100%);
+    background: var(--fallback-gradient);
+    background: var(--gold-gradient);
     height: 2px;
     width: 46%;
     left: 0;
@@ -804,7 +804,7 @@ footer #social-media-container {
     #contact-form {
         padding: 45px;
         width: fit-content;
-        box-shadow: 25px 25px 0px #202020;
+        box-shadow: 25px 25px 0px var(--sec-section-bg-color)
     }
 
     #contact-avatar-img-container {
