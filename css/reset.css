@@ -1,11 +1,15 @@
 :root {
-	--sections-text: #f0fffb;
-	--fallback-gradient: #ae8625;
-	--main-section-bg-color: #002d2d;
-	--sec-section-bg-color: #202020;
-	--gold-gradient: linear-gradient(90deg, rgba(174,134,37,1) 0%, rgba(247,239,138,1) 0%, rgba(210,172,71,1) 100%);
-	--submit-btn-color: #f7ef8a;
-	--black: #000;
+	--sections-text: rgba(240, 255, 251, 1);
+	--fallback-gradient: rgba(174, 134, 37, 1);
+	--form-placeholder: rgba(174, 134, 37, 1);
+	--form-input-text: rgba(174, 134, 37, 1);
+	--primary-section-bg-color: rgba(0, 45, 45, 1);
+	--main-section-bg-color: rgba(39, 48, 54, 1);
+	--sec-section-bg-color: rgba(240, 255, 251, 1);
+	--section-header-dark: rgba(39, 48, 54, 1);
+	--section-header-light: rgba(240, 255, 251, 1);
+	--gold-gradient: linear-gradient(90deg, rgba(174,134,37,1) 0%, rgba(247,239,138,1) 0%, rgba(210, 172, 71, 1) 100%);
+	--submit-btn-color: rgba(247, 239, 138, 1);
 }
 
 * {

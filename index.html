@@ -25,13 +25,16 @@
         </div>
         <div id="nav-btn-container">
             <button class="nav-btn">
-                <a href="#about-container">About</a>
+                <a href="#main-about-container">About</a>
             </button>
             <button class="nav-btn">
-                <a href="#">Plans</a>
+                <a href="#plans-container">Plans</a>
             </button>
             <button class="nav-btn">
-                <a href="#">Contact</a>
+                <a href="#contact-header-container">Contact</a>
+            </button>
+            <button class="nav-btn">
+                <a href="#main-testimonials-container">clients</a>
             </button>
         </div>
         <div id="burger">
@@ -58,7 +61,10 @@
     <!-- about section -->
     <section id="main-about-container">
         <div id="sec-about-container">
-            <h1>who we are?</h1>
+            <h1 class="section-header about-header">
+                who we are?
+                <span class="musical-note-icon">&#9834;</span>
+            </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto non error odio velit, at veniam quibusdam cum aliquid provident illo possimus perferendis ducimus nesciunt pariatur temporibus excepturi earum?
             Autem fugit, harum mollitia quibusdam quis veniam expedita doloremque magni quas possimus accusantium error velit exercitationem vitae suscipit repellendus sint quia nemo. Nemo, suscipit? Deleniti magnam non ducimus odio beatae!</p>
         </div>
@@ -119,32 +125,32 @@
     <section id="main-testimonials-container">
         <div id="testimonial-cards-container">
             <div class="testimonial-card">
-                <p class="client-name">Matthew Griffin</p>
+                <h3 class="client-name">Matthew Griffin</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="client-name">Jessie Hopkins</p>
+                <h3 class="client-name">Jessie Hopkins</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="client-name">Carla Lamb</p>
+                <h3 class="client-name">Carla Lamb</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="client-name">Mike Little</p>
+                <h3 class="client-name">Mike Little</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="client-name">Jose Alexander</p>
+                <h3 class="client-name">Jose Alexander</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="client-name">Earl Lewis</p>
+                <h3 class="client-name">Earl Lewis</h3>
                 <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
             </div>
         </div>
@@ -175,19 +181,10 @@
                 <label for="lastname" class="form-label">lastname: </label>
                 <input type="text" name="lastname" id="lastname" class="form-input" required>
             </div>
-            <div class="form-input-container">
-                <label for="address" class="form-label">address: </label>
-                <input type="text" name="address" id="address" class="form-input" required>
-            </div>
 
             <div class="form-input-container">
                 <label for="zipcode" class="form-label">zipcode: </label>
                 <input type="number" name="zipcode" id="zipcode" class="form-input" required>
-            </div>
-
-            <div class="form-input-container">
-                <label for="product-name" class="form-label">product name(s): </label>
-                <input type="text" name="product-name" id="product-name" class="form-input" required>
             </div>
 
             <div class="form-input-container">
@@ -196,9 +193,20 @@
             </div>
 
             <div class="form-input-container">
+                <label for="mobile" class="form-label">mobile: </label>
+                <input type="tel" name="mobie" id="mobile" class="form-input" required>
+            </div>
+
+            <div class="form-input-container">
                 <label for="email" class="form-label">email: </label>
                 <input type="email" name="email" id="email" class="form-input" required>
             </div>
+
+            <div class="form-input-container">
+                <label for="address" class="form-label">address: </label>
+                <input type="text" name="address" id="address" class="form-input" required>
+            </div>
+
             <button type="submit" id="submit-btn" data-submitBtn="submit">submit</button>
         </form>
         <div id="contact-avatar-img-container">
@@ -206,9 +214,10 @@
         </div>
     </section>
 
+    <!-- footer section -->
     <div id="footer-wave-shape-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#202020" fill-opacity="1" d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            <path fill="#273036" fill-opacity="1" d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
         </svg>
     </div>
     <footer>
@@ -234,6 +243,6 @@
             <p>&copy; 2022</p>
         </div>
     </footer>
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

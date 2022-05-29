@@ -1,12 +1,17 @@
 /* -------------------------- navbar section ------------------------------- */
 
 #navbar-container {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 #logo-container {
@@ -145,7 +150,7 @@
 /* -------------------------- header section ------------------------------- */
 #header-container {
     height: 700px;
-    background-color: var(--sec-section-bg-color);
+    background-color: var(--main-section-bg-color);
 }
 
 #header-container svg {
@@ -188,7 +193,7 @@ blockquote p, figcaption {
 /* -------------------------- about section ------------------------------- */
 
 #main-about-container {
-    background-color: var(--sections-text);
+    background-color: var(--sec-section-bg-color);
     ;
 }
 
@@ -198,11 +203,12 @@ blockquote p, figcaption {
     width: 70%;
 }
 
-#sec-about-container h1{
+#sec-about-container .about-header {
+    margin: 35px 0;
     font-weight: 600;
     font-size: 30px;
     width: fit-content;
-    color: var(--main-section-bg-color);
+    color: var(--section-header-dark);
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -214,7 +220,7 @@ blockquote p, figcaption {
 
 #main-about-container::after {
     content: '';
-    background-image: url(../images/undraw_handcrafts_search.png);
+    background-image: url(../images/undraw_People_search_re_5rre.png);
     width: 30%;
     position: absolute;
     height: 75%;
@@ -235,7 +241,7 @@ blockquote p, figcaption {
 #plans-container {
     text-align: center;
     padding-top: 25px;
-    background-color: var(--main-section-bg-color);
+    background-color: var(--primary-section-bg-color);
 }
 
 #plans-container svg {
@@ -246,7 +252,10 @@ blockquote p, figcaption {
     width: fit-content;
     margin: 25px auto;
     font-size: 30px;
-    color: var(--sections-text);
+    color: var(--section-header-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-header.testimonials-header{
@@ -256,8 +265,6 @@ blockquote p, figcaption {
 .musical-note-icon{
     position: absolute;
     bottom: -25px;
-    left: calc(50% - 8%);
-    margin: 0 4%;
 }
 
 .section-header::before {
@@ -266,7 +273,7 @@ blockquote p, figcaption {
     background: var(--fallback-gradient);
     background: var(--gold-gradient);
     height: 2px;
-    width: 46%;
+    width: 45%;
     left: 0;
     bottom: 0;
     margin: -10px 0;
@@ -277,7 +284,7 @@ blockquote p, figcaption {
     background: var(--fallback-gradient);
     background: var(--gold-gradient);
     height: 2px;
-    width: 46%;
+    width: 45%;
     right: 0;
     bottom: 0;
     margin: -10px 0;
@@ -305,7 +312,7 @@ blockquote p, figcaption {
     flex-direction: column;
     margin: 30px;
     text-align: center;
-    background-color: var(--sections-text);
+    background-color: var(--sec-section-bg-color);
     border-radius: 15px;
     width: 300px;
     transition: all 0.4s ease-in-out;
@@ -366,7 +373,7 @@ blockquote p, figcaption {
 /* -------------------------- testimonials section ------------------------------- */
 
 #main-testimonials-container {
-	background-color: var(--sections-text);
+	background-color: var(--sec-section-bg-color);
     padding: 40px;
     display: flex;
     justify-content: space-around;
@@ -427,17 +434,11 @@ blockquote p, figcaption {
     user-select: none;
 }
 
-.testimonial-card .client-name {
-    font-size: 1.5em;
-    font-weight: 600;
-    padding-top: 15px;
-
-}
 
 .testimonial-card .client-feedback {
     line-height: 1.2;
-    padding: 15px 0;
-    font-size: 15px;
+    padding-bottom: 15px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -458,21 +459,18 @@ blockquote p, figcaption {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column-reverse;
-    padding: 20px;
+    padding: 25px;
 }
 
 .contact-header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 3%;
-    font-size: 22px;
+    margin: 45px 35px;
+    color: var(--black);
 }
 
 #contact-header-container p {
     width: 85%;
     margin: 35px;
-    font-size: 16px;
+    font-size: 1.1em;
     line-height: 1.5;
 }
 
@@ -482,12 +480,12 @@ blockquote p, figcaption {
     grid-template-columns: repeat(2, 50%);
     min-height: 250px;
     width: 100%;
-    grid-gap: 15px;
-    background-color: var(--main-section-bg-color);
+    grid-gap: 20px;
+    background-color: var(--primary-section-bg-color);
     justify-content: center;
     border-radius: 15px;
     color: var(--sections-text);
-    box-shadow: 10px 15px 0px var(--sec-section-bg-color);
+    box-shadow:  0px 10px 35px var(--main-section-bg-color);
 }
 
 .form-input-container {
@@ -496,10 +494,7 @@ blockquote p, figcaption {
     flex-direction: column;
 }
 
-.form-input-container:nth-last-child(2) ,
-.form-input-container:nth-child(5),
-.form-input-container:nth-child(6)
-{
+.form-input-container:nth-last-child(-n+4) {
     grid-column: span 2;
 }
 
@@ -509,12 +504,17 @@ blockquote p, figcaption {
     padding: 7px;
     margin: 10px 0;
     border-radius: 5px;
-    accent-color: var(--fallback-gradient);
-    color: var(--fallback-gradient);
+    accent-color: var(--form-input-text);
+    color: var(--form-input-text);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 .form-input-container input::placeholder {
-    color: var(--sec-section-bg-color);
+    color: var(--form-placeholder);
 }
 
 .form-input-container label {
@@ -546,7 +546,7 @@ blockquote p, figcaption {
 }
 
 #contact-avatar-img-container {
-    width: 100%;
+    width: 85%;
     animation: up-down 1.5s ease-in-out infinite forwards;
     -webkit-animation: up-down 1.5s ease-in-out infinite forwards;
     mix-blend-mode: multiply;
@@ -564,7 +564,7 @@ blockquote p, figcaption {
 }
 
 footer {
-    background-color: var(--sec-section-bg-color);
+    background-color: var(--main-section-bg-color);
     color: var(--sections-text);
     display: flex;
     flex-direction: column;
@@ -772,13 +772,26 @@ footer #social-media-container {
 
 /* -------------------------- contact section media queries ------------------------------- */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 425px) {
+    #contact-form {
+        max-width: fit-content;
+    }
+}
+
+@media screen and (min-width: 890px) {
     #main-contact-container {
-        margin: 15%;
+        flex-direction: row;
     }
     .contact-header {
+        position: absolute;
+        left: 0;
+        top: 0;
         margin: 5%;
         font-size: 1.8em;
+        color: var(--sections-text);
+    }
+    #contact-form {
+        box-shadow: 10px 15px 0px var(--main-section-bg-color);
     }
     #contact-header-container p {
         width: 60%;
@@ -788,25 +801,18 @@ footer #social-media-container {
 @media screen and (min-width: 1024px) {
     #main-contact-container {
         padding: 35px;
-        flex-direction: row-reverse;
         margin: 0;
     }
-
     .contact-header {
         margin: 5%;
         font-size: 35px;
     }
-
     #contact-header-container p {
         width: 45%;
     }
-
     #contact-form {
-        padding: 45px;
-        width: fit-content;
-        box-shadow: 25px 25px 0px var(--sec-section-bg-color)
+        box-shadow: 25px 25px 0px var(--main-section-bg-color)
     }
-
     #contact-avatar-img-container {
         width: 40%;
         margin-bottom: 0;

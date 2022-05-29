@@ -3,8 +3,17 @@ const navBtnsContainer = document.getElementById('nav-btn-container');
 const barOne = document.querySelector('.bar-1')
 const barTwo = document.querySelector('.bar-2')
 const barThree = document.querySelector('.bar-3')
-
+const navbar = document.querySelector('#navbar-container')
 //toggle menulist on small screens
+
+if (window.scrollY > 168) {
+    navbar.style.backgroundColor = 'rgba(0 , 0 , 0, 0.5)'
+} else {
+    navbar.style.backgroundColor = ''
+}
+
+console.log(window.scrollY);
+
 burger.addEventListener('click', (e) => {
     barTwo.classList.toggle('bar-2-animate')
     barOne.classList.toggle('bar-1-animate')
