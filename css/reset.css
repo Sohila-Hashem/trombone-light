@@ -4,9 +4,9 @@
 	--form-placeholder: rgba(174, 134, 37, 1);
 	--form-input-text: rgba(174, 134, 37, 1);
 	--primary-section-bg-color: rgba(0, 45, 45, 1);
-	--main-section-bg-color: rgba(39, 48, 54, 1);
+	--main-section-bg-color: rgb(36 49 51);
 	--sec-section-bg-color: rgba(240, 255, 251, 1);
-	--section-header-dark: rgba(39, 48, 54, 1);
+	--section-header-dark: rgb(36 49 51);
 	--section-header-light: rgba(240, 255, 251, 1);
 	--gold-gradient: linear-gradient(90deg, rgba(174,134,37,1) 0%, rgba(247,239,138,1) 0%, rgba(210, 172, 71, 1) 100%);
 	--submit-btn-color: rgba(247, 239, 138, 1);
@@ -74,4 +74,7 @@ a {
 }
 p {
 	line-height: 1.5;
+}
+p, h1, h2, h3, h4, h5, h6, blockquote, label {
+	text-transform: capitalize;
 }
