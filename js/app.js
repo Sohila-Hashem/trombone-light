@@ -4,7 +4,6 @@ const barOne = document.querySelector('.bar-1')
 const barTwo = document.querySelector('.bar-2')
 const barThree = document.querySelector('.bar-3')
 const navbar = document.querySelector('#navbar-container')
-//toggle menulist on small screens
 
 document.addEventListener('scroll', (e) => {
     if (window.scrollY > 168) {
@@ -13,7 +12,6 @@ document.addEventListener('scroll', (e) => {
         navbar.style.backgroundColor = ''
     }
 })
-
 
 burger.addEventListener('click', (e) => {
     barTwo.classList.toggle('bar-2-animate')
