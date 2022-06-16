@@ -44,6 +44,7 @@ footer, header, hgroup, menu, nav, section {
 html {
     min-height: 100vh;
 	scroll-behavior: smooth;
+	scroll-padding-top: 70px;
 }
 body {
     font-family: 'Philosopher', sans-serif;
@@ -66,7 +67,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-button, input {
+button, input, textarea {
     outline: none;
     border: none;
 }
@@ -78,4 +79,12 @@ p {
 }
 p, h1, h2, h3, h4, h5, h6, blockquote, label {
 	text-transform: capitalize;
+}
+textarea {
+	resize: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }

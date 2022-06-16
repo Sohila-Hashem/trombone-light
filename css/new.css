@@ -1,12 +1,13 @@
 /* -------------------------- navbar section ------------------------------- */
 
-#navbar-container {
+.navbar-container {
     position: fixed;
+    background-color: var(--black);
     z-index: 5;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -14,93 +15,37 @@
     -o-transition: all 0.5s ease-in-out;
 }
 
-#logo-container {
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 5px;
-    margin-left: 10px;
 }
 
-#t-logo-word {
+.t-logo-word {
     font-size: 50px;
     color: var(--sections-text);
     filter: drop-shadow(7px 7px 0px var(--fallback-gradient));
     -webkit-filter: drop-shadow(7px 7px 0px var(--fallback-gradient));
 }
 
-#light-logo-word {
+.light-logo-word {
     color: var(--sections-text);
     text-shadow: -2px 0px 2px var(--fallback-gradient);
 }
 
-
-#nav-btn-container {
-    height: 0;
-    top: -300px;
-    margin: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-btn-container-show {
-    animation: show-nav 0.8s ease-in-out forwards;
-    -webkit-animation: show-nav 0.8s ease-in-out forwards;
-}
-
-.nav-btn-container-hide {
-    animation: hide-nav 0.8s ease-in-out forwards;
-    -webkit-animation: hide-nav 0.8s ease-in-out forwards;
-}
-
-.nav-btn {
-    width: fit-content;
-    background-color: transparent;
-    margin: 15px;
-}
-
-.nav-btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 3px;
-    background: var(--fallback-gradient);
-    background: var(--gold-gradient);
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-.nav-btn:hover::after{
-    width: 100%;
-}
-
-.nav-btn a {
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--sections-text);
-    font-size: 18px;
-}
-
-#burger {
+.burger {
     height: 25px;
     width: 40px;
     cursor: pointer;
-    margin: 15px 15px 0 5px;
 }
 
-#logo-container, #burger {
-    align-self: flex-start;
-}
-
-#burger span {
+.burger span {
     position: absolute;
     width: 100%;
     height: 2px;
@@ -147,6 +92,48 @@
     -o-transform: rotate(-50deg);
 }
 
+.nav-links-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+}
+
+.nav-link {
+    width: fit-content;
+    background-color: transparent;
+    padding: 1em 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 0;
+    height: 2px;
+    background: var(--fallback-gradient);
+    background: var(--gold-gradient);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--sections-text);
+    font-size: 1.2em;
+}
+
 /* -------------------------- header section ------------------------------- */
 #header-container {
     height: 700px;
@@ -169,14 +156,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
-    -webkit-filter: brightness(0.7);
+    filter: grayscale();
+    -webkit-filter: grayscale();
 }
 
 blockquote {
     position: absolute;
-    top: 35%;
-    left: 10%;
+    bottom: 35%;
+    left: 7%;
 }
 
 blockquote p, figcaption {
@@ -198,6 +185,7 @@ blockquote p, figcaption {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    padding: 20px 0;
 }
 
 #sec-about-container {
@@ -216,8 +204,7 @@ blockquote p, figcaption {
 }
 
 #sec-about-container p{
-    line-height: 1.5;
-    font-size: 17px;
+    line-height: 1.8;
 }
 
 #about-img-container {
@@ -286,11 +273,10 @@ blockquote p, figcaption {
 }
 
 #plans-container #plans-text-intro {
-    padding: 15px;
-    line-height: 1.5;
+    line-height: 1.8;
+    padding: 25px;
     width: 80%;
     margin: 0 auto;
-    font-size: 17px;
     color: var(--sections-text);
 }
 
@@ -302,6 +288,7 @@ blockquote p, figcaption {
 }
 
 .card {
+    height: 29em;
     box-shadow: 10px 10px 5px var(--black);
     display: flex;
     flex-direction: column;
@@ -337,7 +324,7 @@ blockquote p, figcaption {
 .card-header {
     padding: 15px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card-header::after {
@@ -352,17 +339,18 @@ blockquote p, figcaption {
 
 .card-info-container {
     padding: 20px;
+    margin: auto;
 }
 
 .card-info-container .card-price {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .card-info-container .card-info {
     line-height: 1.5;
-    font-size: 17px;
-    padding: 20px;
+    padding: 23px;
+    padding-top: 10px;
 }
 
 /* -------------------------- testimonials section ------------------------------- */
@@ -489,7 +477,7 @@ blockquote p, figcaption {
     flex-direction: column;
 }
 
-.form-input-container:nth-last-child(-n+4) {
+.form-input-container:nth-last-child(-n+5) {
     grid-column: span 2;
 }
 
@@ -517,12 +505,17 @@ blockquote p, figcaption {
     font-weight: 600;
 }
 
+#message-textarea {
+    color: var(--form-input-text);
+    margin-top: 10px;
+    padding: 8px;
+}
+
 #contact-form #submit-btn {
     grid-column: span 2;
     width: 160px;
     margin: 0 auto;
     padding: 10px;
-    border-radius: 5px;
     color: var(--submit-btn-color);
     border: 1px solid;
     background-color: transparent;
@@ -618,34 +611,6 @@ footer #social-media-container {
     -webkit-background-clip: text;
 }
 
-/* -------------------------- navbar section animations ------------------------------- */
-
-@keyframes show-nav {
-    0% {
-        height: 0px;
-        opacity: 0;
-    }
-
-    100% {
-        height: 300px;
-        opacity: 1;
-        top: 0;
-    }
-}
-@keyframes hide-nav {
-    0% {
-        height: 300px;
-        top: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        height: 0px;
-        top: -300px;
-    }
-}
-
 /* -------------------------- about section animations ------------------------------- */
 
 @keyframes up-down {
@@ -665,28 +630,27 @@ footer #social-media-container {
     }
 }
 
-
 /* -------------------------- navbar section media queries ------------------------------- */
 
 @media screen and (min-width: 700px) {
-    #navbar-container {
+    .navbar-container {
+        background-color: transparent;
         flex-direction: row;
         justify-content: space-between;
     }
-    #nav-btn-container {
-        margin: 0;
-        height: fit-content;
-        top: 0;
-        padding: 5px;
-        height: fit-content;
+    .nav-links-container {
+        height: auto !important;
+    }
+    .links-container {
+        display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
     }
-    .nav-btn {
-        margin: 15px 25px;
+    .nav-link {
+        margin: 10px 25px;
     }
-    #burger {
+    .burger {
         display: none;
-        order: initial;
     }
 }
 
@@ -790,9 +754,6 @@ footer #social-media-container {
         font-size: 1.8em;
         color: var(--sections-text);
     }
-    #contact-form {
-        box-shadow: 10px 15px 0px var(--main-section-bg-color);
-    }
     #contact-header-container p {
         width: 60%;
     }
@@ -809,9 +770,6 @@ footer #social-media-container {
     }
     #contact-header-container p {
         width: 45%;
-    }
-    #contact-form {
-        box-shadow: 25px 25px 0px var(--main-section-bg-color)
     }
     #contact-avatar-img-container {
         width: 40%;
