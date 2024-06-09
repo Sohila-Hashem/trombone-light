@@ -1,22 +1,13 @@
-# trombone-light
+# About
+A static responsive landing page for trombones, consisting of 4 sections:
+- designed Header
+- About section
+- 3 sample product cards with prices
+- a Contact form section
 
-## overview:
-This is a single responsive landing page for trombones which consists of 4 sections:
-- intro image & logo
-- how-it-works section
-- 3 sample product cards
-- form
+> [URL](https://Sohila-Hashem.github.io/trombone-light/)
 
-## technologies used
-### client side:
-- HTML5
-- CSS3
+# Tech Stack
+- HTML
+- CSS
 - JavaScript
-
-## Running info:
-- app url: [trombone-light](https://sohila-samir.github.io/trombone-light/)
-
-## deployment info:
-- the app is delopyed on **Github pages**.
-
-> the website is just a better version of the freecodecamp task project 
