@@ -1,29 +1,40 @@
-const burger = document.querySelector('.burger');
-const navLinksContainer = document.querySelector('.nav-links-container');
-const linksContainer = document.querySelector('.links-container') ;
-const barOne = document.querySelector('.bar-1');
-const barTwo = document.querySelector('.bar-2');
-const barThree = document.querySelector('.bar-3');
-const navbar = document.querySelector('.navbar-container');
+const navHamburgers = document.querySelectorAll(".navbar__burger");
+const overlay = document.querySelector(".overlay");
 
+class NavbarUtils {
+	static toggleNav(e) {
+		const navbarList = document.querySelector(".navbar__list");
+		const overlay = document.querySelector(".overlay");
 
-document.addEventListener('scroll', (e) => {
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgb(0,0,0)'
-    } else {
-        navbar.style.backgroundColor = ''
-    }
-})
+		navbarList.classList.toggle("navbar__list--active");
+		overlay.classList.toggle("overlay--active");
+	}
+}
 
-burger.addEventListener('click', (e) => {
-    barTwo.classList.toggle('bar-2-animate')
-    barOne.classList.toggle('bar-1-animate')
-    barThree.classList.toggle('bar-3-animate')
-    let navLinksContainerHeight = navLinksContainer.getBoundingClientRect().height
-    let linksContainerHeight = linksContainer.getBoundingClientRect().height
-    if (navLinksContainerHeight === 0) {
-        navLinksContainer.style.height = `${linksContainerHeight}px`
-    } else {
-        navLinksContainer.style.height = '0px'
-    }
-})
+// -----------------LISTENERS-----------------
+// Document
+document.addEventListener("scroll", (e) => {
+	const navbar = document.querySelector(".navbar");
+
+	if (window.scrollY > 50) {
+		navbar.style.backgroundColor = "var(--accent-color)";
+	} else {
+		navbar.style.backgroundColor = "";
+	}
+});
+
+overlay.addEventListener("click", (e) => {
+	const navbarList = document.querySelector(".navbar__list");
+
+	if (navbarList.classList.contains("navbar__list--active")) {
+		NavbarUtils.toggleNav(e);
+	}
+});
+
+// Navbar
+
+navHamburgers.forEach((hamburger) => {
+	hamburger.addEventListener("click", (e) => {
+		NavbarUtils.toggleNav(e);
+	});
+});

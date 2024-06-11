@@ -1,251 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#243133">
-        <!--rendering google fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Cinzel&family=IBM+Plex+Sans:wght@200;400&family=Inconsolata:wght@200&family=Neonderthaw&family=Old+Standard+TT&family=Philosopher&display=swap" rel="stylesheet">
-        <!-- font awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <!-- css reset stylesheet-->
-        <link rel="stylesheet" href="css/reset.css">
-        <!--rendering the main css file -->
-        <link rel="stylesheet" href="css/new.css">
-    <title>Trombone Light</title>
-</head>
-<body>
-    <!-- navabr section -->
-    <nav class="navbar-container">
-        <div class="nav-header">
-            <div class="logo-container">
-                <span class="t-logo-word">T</span>
-                <span class="light-logo-word">Light</span>
-            </div>
-            <div class="burger">
-                <span class="bar-1"></span>
-                <span class="bar-2"></span>
-                <span class="bar-3"></span>
-            </div>
-        </div>
-        <div class="nav-links-container">
-            <ul class="links-container">
-                <li class="nav-link">
-                    <a href="#main-about-container">About</a>
-                </li>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#002d2d" />
+		<!--rendering google fonts-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Cinzel&family=IBM+Plex+Sans:wght@200;400&family=Inconsolata:wght@200&family=Neonderthaw&family=Old+Standard+TT&family=Philosopher&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- font awesome CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+		<!-- css reset stylesheet-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<!--rendering the main css file -->
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Trombone Light</title>
+	</head>
+	<body>
+		<!-- navbar section -->
+		<div aria-hidden="true" class="overlay"></div>
+		<nav class="navbar">
+			<div class="navbar__logo" aria-hidden="true">
+				<span class="navbar__logo__word1">T</span>
+				<span class="navbar__logo__word2">Light</span>
+			</div>
 
-                <li class="nav-link">
-                    <a href="#plans-container">Plans</a>
-                </li>
+			<div class="navbar__burger navbar__burger--closed">
+				<span class="navbar__burger__bar navbar__burger__bar-1"></span>
+				<span class="navbar__burger__bar navbar__burger__bar-2"></span>
+				<span class="navbar__burger__bar navbar__burger__bar-3"></span>
+			</div>
 
-                <li class="nav-link">
-                    <a href="#main-testimonials-container">clients</a>
-                </li>
+			<div class="navbar__list">
+				<div class="navbar__burger navbar__burger--opened">
+					<span
+						class="navbar__burger__bar navbar__burger__bar-1 navbar__burger__bar-1--close"
+					></span>
+					<span
+						class="navbar__burger__bar navbar__burger__bar-2 navbar__burger__bar-2--close"
+					></span>
+					<span
+						class="navbar__burger__bar navbar__burger__bar-3 navbar__burger__bar-3--close"
+					></span>
+				</div>
 
-                <li class="nav-link">
-                    <a href="#contact-header-container">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+				<ul class="navbar__links">
+					<li class="navbar__links__item">
+						<a class="navbar__link" href="#main-about-container">About</a>
+					</li>
 
-    <!-- header section -->
-    <section id="header-container">
-        <div id="header-img-container">
-            <img id="header-img" src="images/header.png" alt="intro image">
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f0fffb" fill-opacity="1" d="M0,320L120,298.7C240,277,480,235,720,229.3C960,224,1200,256,1320,272L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
-        <blockquote>
-            <p>music is life itself</p>
-            <figcaption> __ Louis Armstrong</figcaption>
-        </blockquote>
-    </section>
+					<li class="navbar__links__item">
+						<a class="navbar__link" href="#plans-container">Plans</a>
+					</li>
 
-    <!-- about section -->
-    <section id="main-about-container">
-        <div id="sec-about-container">
-            <h1 class="section-header about-header">
-                who we are?
-                <span class="musical-note-icon">&#9834;</span>
-            </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto non error odio velit, at veniam quibusdam cum aliquid provident illo possimus perferendis ducimus nesciunt pariatur temporibus excepturi earum?
-            Autem fugit,</p>
-        </div>
-        <div id="about-img-container">
-            <img src="images/undraw_People_search_re_5rre.png" alt="avatar">
-        </div>
-    </section>
+					<li class="navbar__links__item">
+						<a class="navbar__link" href="#main-testimonials-container">clients</a>
+					</li>
 
-    <!-- plans section -->
-    <section id="plans-container">
-        <h2 class="section-header">
-            what do we offer?
-            <span class="musical-note-icon">&#9834;</span>
-        </h2>
-        <p id="plans-text-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet corporis voluptas dolorem, totam magnam! Exercitationem ipsa aliquam, distinctio non cupiditate, a omnis eveniet optio excepturi totam quod, vero vel.</p>
-        <div id="cards-container">
-            <div class="card">
-                <div class="card-img-container">
-                    <img class="card-img" src="images/tenor.jpg" alt="tenor Trombone">
-                </div>
-                <p class="card-header">tenor trombone</p>
-                <div class="card-info-container">
-                    <p class="card-price">$600</p>
-                    <p class="card-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui alias atque voluptatem, libero odio, modi nisi temporibus nihil illo error?</p>
-                </div>
-            </div>
+					<li class="navbar__links__item">
+						<a class="navbar__link" href="#contact-header-container">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-            <div class="card">
-                <div class="card-img-container">
-                    <img class="card-img" src="images/bass.jpg" alt="tenor Trombone">
-                </div>
-                <p class="card-header">bass trombone</p>
-                <div class="card-info-container">
-                    <p class="card-price">$900</p>
-                    <p class="card-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui alias atque voluptatem, libero odio, modi nisi temporibus nihil illo error?</p>
-                </div>
-            </div>
+		<!-- header section -->
+		<section id="header">
+			<div class="header__img-container">
+				<img id="header__img" src="images/header.png" alt="banner image" />
+			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
+				<path
+					fill="#f0fffb"
+					fill-opacity="1"
+					d="M0,320L120,298.7C240,277,480,235,720,229.3C960,224,1200,256,1320,272L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+				></path>
+			</svg>
+			<blockquote class="header__">
+				<p>music is life itself</p>
+				<figcaption>__ Louis Armstrong</figcaption>
+			</blockquote>
+		</section>
 
-            <div class="card">
-                <div class="card-img-container">
-                    <img class="card-img" src="images/valve.jpg" alt="tenor Trombone">
-                </div>
-                <p class="card-header">valve trombone</p>
-                <div class="card-info-container">
-                    <p class="card-price">$1100</p>
-                    <p class="card-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui alias atque voluptatem, libero odio, modi nisi temporibus nihil illo error?</p>
-                </div>
-            </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f0fffb" fill-opacity="1" d="M0,32L720,256L1440,0L1440,320L720,320L0,320Z"></path>
-        </svg>
-    </section>
+		<!-- about section -->
+		<section id="main-about-container">
+			<div id="sec-about-container">
+				<h1 class="section-header about-header">
+					who we are?
+					<span class="musical-note-icon">&#9834;</span>
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto
+					non error odio velit, at veniam quibusdam cum aliquid provident illo possimus
+					perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
+				</p>
+			</div>
+			<div id="about-img-container">
+				<img src="images/undraw_People_search_re_5rre.png" alt="avatar" />
+			</div>
+		</section>
 
-    <!-- testmonials section -->
-    <h2 class="section-header testimonials-header">
-        know us better
-        <span class="musical-note-icon">&#9834;</span>
-    </h2>
-    <section id="main-testimonials-container">
-        <div id="testimonial-cards-container">
-            <div class="testimonial-card">
-                <h3 class="client-name">Matthew Griffin</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
-            </div>
+		<!-- plans section -->
+		<section id="plans-container">
+			<h2 class="section-header">
+				what do we offer?
+				<span class="musical-note-icon">&#9834;</span>
+			</h2>
+			<p id="plans-text-intro">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet corporis
+				voluptas dolorem, totam magnam! Exercitationem ipsa aliquam, distinctio non
+				cupiditate, a omnis eveniet optio excepturi totam quod, vero vel.
+			</p>
+			<div id="cards-container">
+				<div class="card">
+					<div class="card-img-container">
+						<img class="card-img" src="images/tenor.jpg" alt="tenor Trombone" />
+					</div>
+					<p class="card-header">tenor trombone</p>
+					<div class="card-info-container">
+						<p class="card-price">$600</p>
+						<p class="card-info">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
+							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
+							error?
+						</p>
+					</div>
+				</div>
 
-            <div class="testimonial-card">
-                <h3 class="client-name">Jessie Hopkins</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
-            </div>
+				<div class="card">
+					<div class="card-img-container">
+						<img class="card-img" src="images/bass.jpg" alt="tenor Trombone" />
+					</div>
+					<p class="card-header">bass trombone</p>
+					<div class="card-info-container">
+						<p class="card-price">$900</p>
+						<p class="card-info">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
+							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
+							error?
+						</p>
+					</div>
+				</div>
 
-            <div class="testimonial-card">
-                <h3 class="client-name">Carla Lamb</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet tae atque, odio adipisci eos.</p>
-            </div>
+				<div class="card">
+					<div class="card-img-container">
+						<img class="card-img" src="images/valve.jpg" alt="tenor Trombone" />
+					</div>
+					<p class="card-header">valve trombone</p>
+					<div class="card-info-container">
+						<p class="card-price">$1100</p>
+						<p class="card-info">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
+							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
+							error?
+						</p>
+					</div>
+				</div>
+			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
+				<path
+					fill="#f0fffb"
+					fill-opacity="1"
+					d="M0,32L720,256L1440,0L1440,320L720,320L0,320Z"
+				></path>
+			</svg>
+		</section>
 
-            <div class="testimonial-card">
-                <h3 class="client-name">Mike Little</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
-            </div>
+		<!-- testmonials section -->
+		<h2 class="section-header testimonials-header">
+			know us better
+			<span class="musical-note-icon">&#9834;</span>
+		</h2>
+		<section id="main-testimonials-container">
+			<div id="testimonial-cards-container">
+				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
+					<h3 class="testimonial__author">Matthew Griffin</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
+						beatae atque, odio adipisci eos.
+					</p>
+				</div>
 
-            <div class="testimonial-card">
-                <h3 class="client-name">Jose Alexander</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
-            </div>
+				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
+					<h3 class="testimonial__author">Jessie Hopkins</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
+						beatae atque, odio adipisci eos.
+					</p>
+				</div>
 
-            <div class="testimonial-card">
-                <h3 class="client-name">Earl Lewis</h3>
-                <p class="client-feedback">Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae beatae atque, odio adipisci eos.</p>
-            </div>
-        </div>
-        <div id="clients-avatar-img-container">
-            <img id="clients-avatar-img" src="images/undraw_product_iteration_kjok.png" alt="avatar">
-        </div>
-    </section>
+				<div class="testimonial-card" role="">
+					<h3 class="testimonial__author">Carla Lamb</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet tae atque, odio adipisci eos.
+					</p>
+				</div>
 
-    <!-- contact section -->
-    <div id="contact-header-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#243133" fill-opacity="1" d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-        </svg>
-        <h2 class="section-header contact-header">
-            contact us
-            <span class="musical-note-icon">&#9834;</span>
-        </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad unde ut, odit harum voluptatem omnis recusandae culpa eligendi earum dignissimos iure, fugiat veritatis deleniti amet sit magni praesentium expedita!</p>
-    </div>
-    <section id="main-contact-container">
-        <form action="#" id="contact-form">
-            <div class="form-input-container">
-                <label for="firstname" class="form-label">firstname: </label>
-                <input type="text" name="firstname" id="firstname" class="form-input" required>
-            </div>
+				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
+					<h3 class="testimonial__author">Mike Little</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
+						beatae atque, odio adipisci eos.
+					</p>
+				</div>
 
-            <div class="form-input-container">
-                <label for="lastname" class="form-label">lastname: </label>
-                <input type="text" name="lastname" id="lastname" class="form-input" required>
-            </div>
+				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
+					<h3 class="testimonial__author">Jose Alexander</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
+						beatae atque, odio adipisci eos.
+					</p>
+				</div>
 
-            <div class="form-input-container">
-                <label for="mobile" class="form-label">mobile: </label>
-                <input type="tel" name="mobie" id="mobile" class="form-input" required>
-            </div>
+				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
+					<h3 class="testimonial__author">Earl Lewis</h3>
+					<p class="testimonial__feedback">
+						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
+						beatae atque, odio adipisci eos.
+					</p>
+				</div>
+			</div>
+			<div id="clients-avatar-img-container">
+				<img
+					id="clients-avatar-img"
+					src="images/undraw_product_iteration_kjok.png"
+					alt="avatar"
+				/>
+			</div>
+		</section>
 
-            <div class="form-input-container">
-                <label for="email" class="form-label">email: </label>
-                <input type="email" name="email" id="email" class="form-input" required>
-            </div>
+		<!-- contact section -->
+		<div id="contact-header-container">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
+				<path
+					fill="rgb(0, 45, 45)"
+					fill-opacity="1"
+					d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+				></path>
+			</svg>
+			<h2 class="section-header contact-header">
+				contact us
+				<span class="musical-note-icon">&#9834;</span>
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad unde ut, odit
+				harum voluptatem omnis recusandae culpa eligendi earum dignissimos iure, fugiat
+				veritatis deleniti amet sit magni praesentium expedita!
+			</p>
+		</div>
+		<section id="main-contact-container">
+			<form action="#" id="contact-form">
+				<div class="form-input-container">
+					<label for="firstname" class="form-label">firstname: </label>
+					<input
+						type="text"
+						name="firstname"
+						id="firstname"
+						class="form-input"
+						required
+					/>
+				</div>
 
-            <div class="form-input-container">
-                <label for="address" class="form-label">address: </label>
-                <input type="text" name="address" id="address" class="form-input" required>
-            </div>
+				<div class="form-input-container">
+					<label for="lastname" class="form-label">lastname: </label>
+					<input type="text" name="lastname" id="lastname" class="form-input" required />
+				</div>
 
-            <div class="form-input-container">
-                <label for="message" class="form-label">message: </label>
-                <textarea name="message" id="message-textarea" class="form-input" rows="5" placeholder="send us a message and we will contact you..." required></textarea>
-            </div>
+				<div class="form-input-container">
+					<label for="mobile" class="form-label">mobile: </label>
+					<input type="tel" name="mobie" id="mobile" class="form-input" required />
+				</div>
 
-            <button type="submit" id="submit-btn" data-submitBtn="submit">submit</button>
-        </form>
-        <div id="contact-avatar-img-container">
-            <img id="contact-avatar-img" src="images/undraw_Contact_us_re_4qqt.png" alt="avatar">
-        </div>
-    </section>
+				<div class="form-input-container">
+					<label for="email" class="form-label">email: </label>
+					<input type="email" name="email" id="email" class="form-input" required />
+				</div>
 
-    <!-- footer section -->
-    <div id="footer-wave-shape-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#243133" fill-opacity="1" d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-        </svg>
-    </div>
-    <footer>
-        <div id="social-media-container">
-            <h2 class="section-header social-media-header">
-                find us on social media
-                <span class="musical-note-icon">&#9834;</span>
-            </h2>
-            <div id="social-media-icons-container">
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </div>
-        </div>
-        <div id="me-container">
-            <p>Made with love by <a href="https://github.com/Sohila-Samir">Sto</a></p>
-            <p>&copy; 2022</p>
-        </div>
-    </footer>
-    <script src="js/app.js"></script>
-</body>
+				<div class="form-input-container">
+					<label for="address" class="form-label">address: </label>
+					<input type="text" name="address" id="address" class="form-input" required />
+				</div>
+
+				<div class="form-input-container">
+					<label for="message" class="form-label">message: </label>
+					<textarea
+						name="message"
+						id="message-textarea"
+						class="form-input"
+						rows="5"
+						placeholder="send us a message and we will contact you..."
+						required
+					></textarea>
+				</div>
+
+				<button type="submit" id="submit-btn" data-submitBtn="submit">submit</button>
+			</form>
+			<div id="contact-avatar-img-container">
+				<img
+					id="contact-avatar-img"
+					src="images/undraw_Contact_us_re_4qqt.png"
+					alt="avatar"
+				/>
+			</div>
+		</section>
+
+		<!-- footer section -->
+		<div id="footer-wave-shape-container" aria-hidden="true">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path
+					fill="rgb(0, 45, 45)"
+					fill-opacity="1"
+					d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+				></path>
+			</svg>
+		</div>
+		<footer>
+			<div id="social-media-container">
+				<h2 class="section-header social-media-header">
+					find us on social media
+					<span class="musical-note-icon">&#9834;</span>
+				</h2>
+				<div id="social-media-icons-container">
+					<a href="#">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#">
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+				</div>
+			</div>
+			<div id="me-container">
+				<p>Made with love by <a href="https://github.com/Sohila-Samir">Sto</a></p>
+				<p>&copy; 2022</p>
+			</div>
+		</footer>
+		<script src="js/app.js"></script>
+	</body>
 </html>
