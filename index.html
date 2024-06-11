@@ -17,6 +17,8 @@
 		/>
 		<!-- css reset stylesheet-->
 		<link rel="stylesheet" href="css/reset.css" />
+		<!-- css components stylesheet-->
+		<link rel="stylesheet" href="css/components.css" />
 		<!--rendering the main css file -->
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Trombone Light</title>
@@ -51,7 +53,7 @@
 
 				<ul class="navbar__links">
 					<li class="navbar__links__item">
-						<a class="navbar__link" href="#main-about-container">About</a>
+						<a class="navbar__link" href="#about">About</a>
 					</li>
 
 					<li class="navbar__links__item">
@@ -72,28 +74,31 @@
 		<!-- header section -->
 		<section id="header" class="header">
 			<img class="header__img" src="images/header.png" alt="banner image" />
-			<blockquote class="header__">
+			<blockquote class="header__heading">
 				<p>music is life itself</p>
 				<figcaption>__ Louis Armstrong</figcaption>
 			</blockquote>
 		</section>
 
 		<!-- about section -->
-		<section id="main-about-container">
-			<div id="sec-about-container">
-				<h1 class="section-header about-header">
+		<section id="about" class="about">
+			<div class="about__content--wrapper">
+				<h1 class="about__heading section__heading">
 					who we are?
-					<span class="musical-note-icon">&#9834;</span>
+					<span class="section__heading__icon">&#9834;</span>
 				</h1>
-				<p>
+				<p class="about__content section__content">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto
 					non error odio velit, at veniam quibusdam cum aliquid provident illo possimus
 					perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
 				</p>
 			</div>
-			<div id="about-img-container">
-				<img src="images/undraw_People_search_re_5rre.png" alt="avatar" />
-			</div>
+			<img
+				class="about__img"
+				aria-hidden="true"
+				src="images/undraw_People_search_re_5rre.png"
+				alt="avatar"
+			/>
 		</section>
 
 		<!-- plans section -->
@@ -105,11 +110,11 @@
 					d="M0,320L120,298.7C240,277,480,235,720,229.3C960,224,1200,256,1320,272L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
 				></path>
 			</svg> -->
-			<h2 class="section-header">
+			<h2 class="plans__heading section__heading">
 				what do we offer?
-				<span class="musical-note-icon">&#9834;</span>
+				<span class="section__heading__icon">&#9834;</span>
 			</h2>
-			<p id="plans-text-intro">
+			<p id="plans-text-intro" class="section__content">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet corporis
 				voluptas dolorem, totam magnam! Exercitationem ipsa aliquam, distinctio non
 				cupiditate, a omnis eveniet optio excepturi totam quod, vero vel.
@@ -170,9 +175,9 @@
 		</section>
 
 		<!-- testmonials section -->
-		<h2 class="section-header testimonials-header">
+		<h2 class="section__heading testimonials__heading">
 			know us better
-			<span class="musical-note-icon">&#9834;</span>
+			<span class="section__heading__icon">&#9834;</span>
 		</h2>
 		<section id="main-testimonials-container">
 			<div id="testimonial-cards-container">
@@ -241,11 +246,11 @@
 					d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
 				></path>
 			</svg>
-			<h2 class="section-header contact-header">
+			<h2 class="contact__heading section__heading">
 				contact us
-				<span class="musical-note-icon">&#9834;</span>
+				<span class="section__heading__icon">&#9834;</span>
 			</h2>
-			<p>
+			<p class="contact__content section__content">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad unde ut, odit
 				harum voluptatem omnis recusandae culpa eligendi earum dignissimos iure, fugiat
 				veritatis deleniti amet sit magni praesentium expedita!
@@ -260,28 +265,57 @@
 						name="firstname"
 						id="firstname"
 						class="form-input"
+						placeholder="Jane"
 						required
 					/>
 				</div>
 
 				<div class="form-input-container">
 					<label for="lastname" class="form-label">lastname: </label>
-					<input type="text" name="lastname" id="lastname" class="form-input" required />
+					<input
+						type="text"
+						name="lastname"
+						id="lastname"
+						class="form-input"
+						placeholder="Doe"
+						required
+					/>
 				</div>
 
 				<div class="form-input-container">
 					<label for="mobile" class="form-label">mobile: </label>
-					<input type="tel" name="mobie" id="mobile" class="form-input" required />
+					<input
+						type="tel"
+						name="mobie"
+						id="mobile"
+						class="form-input"
+						placeholder="+1 (123) 456-7890"
+						required
+					/>
 				</div>
 
 				<div class="form-input-container">
 					<label for="email" class="form-label">email: </label>
-					<input type="email" name="email" id="email" class="form-input" required />
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="form-input"
+						placeholder="example@domain.com"
+						required
+					/>
 				</div>
 
 				<div class="form-input-container">
 					<label for="address" class="form-label">address: </label>
-					<input type="text" name="address" id="address" class="form-input" required />
+					<input
+						type="text"
+						name="address"
+						id="address"
+						class="form-input"
+						placeholder="1234 Main St, Apartment 1B, Springfield, IL 62704"
+						required
+					/>
 				</div>
 
 				<div class="form-input-container">
@@ -321,7 +355,7 @@
 			<div id="social-media-container">
 				<h2 class="section-header social-media-header">
 					find us on social media
-					<span class="musical-note-icon">&#9834;</span>
+					<span class="section__heading__icon">&#9834;</span>
 				</h2>
 				<div id="social-media-icons-container">
 					<a href="#">
@@ -340,6 +374,6 @@
 				<p>&copy; 2022</p>
 			</div>
 		</footer>
-		<script src="js/app.js"></script>
+		<script src="js/app.js" defer></script>
 	</body>
 </html>

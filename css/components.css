@@ -1,0 +1,43 @@
+p {
+	line-height: 1.8;
+	color: var(--primary-color);
+}
+
+.section__heading {
+	margin-inline: auto;
+	font-size: 2.6em;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section__content {
+	font-size: 1.3em;
+}
+
+.section__heading__icon {
+	width: 100%;
+	text-align: center;
+}
+
+.section__heading__icon::before,
+.section__heading__icon::after {
+	position: absolute;
+	content: "";
+	background: var(--fallback-gradient);
+	background: var(--gold-gradient);
+	height: 0.2rem;
+	width: 45%;
+	bottom: 0;
+	top: 50%;
+}
+
+.section__heading__icon::before {
+	left: 0;
+}
+
+.section__heading__icon::after {
+	right: 0;
+}

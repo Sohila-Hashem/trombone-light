@@ -17,9 +17,9 @@ document.addEventListener("scroll", (e) => {
 	const navbar = document.querySelector(".navbar");
 
 	if (window.scrollY > 50) {
-		navbar.style.backgroundColor = "var(--accent-color)";
+		navbar.classList.add("navbar--highlight");
 	} else {
-		navbar.style.backgroundColor = "";
+		navbar.classList.remove("navbar--highlight");
 	}
 });
 
