@@ -149,24 +149,12 @@
 }
 
 /* -------------------------- header section ------------------------------- */
-#header {
-	height: 700px;
+.header {
+	height: 100vh;
 	background-color: var(--primary-color);
 }
 
-#header svg {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-}
-
-.header__img-container {
-	width: 100%;
-	height: 100%;
-	margin-bottom: 15px;
-}
-
-.header__img-container img {
+.header__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -176,19 +164,18 @@
 
 blockquote {
 	position: absolute;
-	bottom: 35%;
-	left: 7%;
+	top: 45%;
+	left: 10%;
 }
 
 blockquote p,
 figcaption {
 	background: var(--fallback-gradient);
 	background: var(--gold-gradient);
-	width: fit-content;
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
-	font-size: 25px;
+	font-size: 2.5em;
 	font-weight: 600;
 }
 
@@ -640,22 +627,6 @@ footer #social-media-container {
 		-moz-transform: translateY(-10px);
 		-ms-transform: translateY(-10px);
 		-o-transform: translateY(-10px);
-	}
-}
-
-/* -------------------------- header section media queries ------------------------------- */
-
-@media screen and (min-width: 700px) {
-	.header__img-container {
-		width: 50%;
-	}
-	blockquote {
-		top: 45%;
-		left: 55%;
-	}
-	blockquote p {
-		font-size: 2.5em;
-		font-weight: 600;
 	}
 }
 
