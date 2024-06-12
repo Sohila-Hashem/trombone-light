@@ -21,7 +21,7 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 1.3em;
+	padding: 0.5em 1em;
 	z-index: 10000;
 	transition: all 0.25s ease-in-out;
 }
@@ -87,9 +87,8 @@
 	position: absolute;
 	left: 0;
 	width: 0;
-	bottom: -5px;
-	height: 2px;
-	background: var(--fallback-gradient);
+	bottom: -40%;
+	height: 0.1em;
 	background: var(--gold-gradient);
 	transition: all 0.3s ease-in-out;
 }
@@ -133,7 +132,7 @@
 
 /* -------------------------- navbar media queries ------------------------------- */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
 	.navbar {
 		justify-content: initial;
 		background-color: transparent;
@@ -159,11 +158,9 @@
 }
 
 .header__img {
-	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	filter: grayscale();
-	-webkit-filter: grayscale();
 }
 
 .header__heading {
@@ -173,14 +170,16 @@
 }
 
 .header__heading p,
-.header__heading figcaption {
-	background: var(--fallback-gradient);
+.header__heading cite {
 	background: var(--gold-gradient);
 	color: transparent;
 	background-clip: text;
-	-webkit-background-clip: text;
-	font-size: 2.5em;
+	font-size: 3.5em;
 	font-weight: 600;
+}
+
+.header__heading cite {
+	font-size: 2.5em;
 }
 
 /* -------------------------- about section ------------------------------- */
@@ -197,7 +196,7 @@
 }
 
 .about__content--wrapper {
-	width: fit-content;
+	width: 100%;
 }
 
 .about__heading {
@@ -205,8 +204,7 @@
 }
 
 .about__img {
-	display: block;
-	width: 23em;
+	width: 20em;
 	mix-blend-mode: multiply;
 	animation: up-down 1.5s ease-in-out infinite forwards;
 	-webkit-animation: up-down 1.5s ease-in-out infinite forwards;
@@ -222,112 +220,101 @@
 	.about__heading {
 		margin-inline: initial;
 	}
-
-	.about__content--wrapper {
-		width: 60%;
-	}
 }
 
 /* -------------------------- plans section ------------------------------- */
 
-#plans-container {
-	text-align: center;
-	padding-top: 25px;
+.plans {
+	min-height: 100vh;
 	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	text-align: center;
+	padding-top: 2em;
 }
 
-#plans-container svg {
-	display: block;
+.plans__svg {
+	background-color: var(--primary-color);
 }
 
 .plans__heading {
 	color: var(--secondary-color);
 }
 
-.musical-note-icon {
-	position: absolute;
-	bottom: -25px;
+.plans__content {
+	padding: 2em;
 }
 
-#plans-container #plans-text-intro {
-	line-height: 1.8;
-	padding: 25px;
-	width: 80%;
-	margin: 0 auto;
-	color: var(--secondary-color);
-}
-
-#cards-container {
+.plans__cards {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 3em 2em;
+	padding: 2em;
 }
 
-.card {
-	height: 29em;
-	box-shadow: 10px 10px 5px var(--primary-color);
+.plans__card {
+	width: fit-content;
+	max-width: 20em;
+	height: 30em;
 	display: flex;
 	flex-direction: column;
-	margin: 30px;
+	border-radius: 1.5rem;
 	text-align: center;
-	background-color: var(--secondary-color);
-	border-radius: 15px;
-	width: 300px;
-	transition: all 0.4s ease-in-out;
+	overflow: scroll;
+	color: var(--primary-color);
+	transition: box-shadow 0.4s ease-in-out;
 }
 
-.card:hover {
+.plans__card:hover {
 	cursor: pointer;
-	transform: translateY(-15px);
-	-webkit-transform: translateY(-15px);
-	-moz-transform: translateY(-15px);
-	-ms-transform: translateY(-15px);
-	-o-transform: translateY(-15px);
+	box-shadow: 0.7em 0.7em 0.5em var(--fallback-color);
 }
 
-.card-img-container img {
-	width: 100%;
-	border-radius: 15px 15px 0 0;
-	-webkit-border-radius: 15px 15px 0 0;
-	-moz-border-radius: 15px 15px 0 0;
-	-ms-border-radius: 15px 15px 0 0;
-	-o-border-radius: 15px 15px 0 0;
+.plans__card__info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	height: 100%;
+	padding: 2em 1em;
+	background-color: var(--secondary-color);
 }
 
-.card-header {
-	padding: 15px;
+.plans__card__info__heading {
+	color: var(--fallback-color);
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 1.5em;
 }
 
-.card-header::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: var(--primary-color);
-}
-
-.card-info-container {
-	padding: 20px;
-	margin: auto;
-}
-
-.card-info-container .card-price {
-	font-size: 18px;
+.plans__card__info__price {
 	font-weight: 600;
+	font-size: 1.2em;
 }
 
-.card-info-container .card-info {
-	line-height: 1.5;
-	padding: 23px;
-	padding-top: 10px;
+.plans__card__info__summery {
+	font-size: 1em;
+}
+
+/* -------------------------- plans section media queries ------------------------------- */
+
+@media screen and (min-width: 768px) {
+	.plans__cards {
+		flex-direction: row;
+	}
+
+	.plans__card:nth-child(2) {
+		margin-bottom: 10%;
+	}
+
+	.plans__card:nth-child(3) {
+		margin-bottom: 20%;
+	}
 }
 
 /* -------------------------- testimonials section ------------------------------- */
+.testimonials__svg {
+	background-color: var(--primary-color);
+}
 
 #main-testimonials-container {
 	background-color: var(--secondary-color);
@@ -409,6 +396,10 @@
 }
 
 /* -------------------------- contact section ------------------------------- */
+
+.contact__svg {
+	background-color: var(--secondary-color);
+}
 
 #main-contact-container {
 	display: flex;
@@ -519,11 +510,11 @@
 
 /* -------------------------- footer section ------------------------------- */
 
-#footer-wave-shape-container svg {
-	display: block;
+.footer__svg {
+	background-color: var(--secondary-color);
 }
 
-footer {
+.footer {
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 	display: flex;
@@ -535,10 +526,6 @@ footer {
 
 footer #social-media-container {
 	padding: 30px;
-}
-
-.social-media-header {
-	font-size: 20px;
 }
 
 #social-media-icons-container {
@@ -600,37 +587,6 @@ footer #social-media-container {
 		-moz-transform: translateY(-10px);
 		-ms-transform: translateY(-10px);
 		-o-transform: translateY(-10px);
-	}
-}
-
-/* -------------------------- plans section media queries ------------------------------- */
-
-@media screen and (min-width: 768px) {
-	#plans-container svg {
-		display: block;
-		margin-top: -100px;
-	}
-
-	#cards-container {
-		flex-direction: row;
-		align-items: center;
-		margin: 20px;
-	}
-
-	.card {
-		margin: 15px;
-	}
-
-	.card-info-container {
-		padding: 15px 0px;
-	}
-
-	.card:nth-child(2) {
-		margin-bottom: 10%;
-	}
-
-	.card:nth-child(3) {
-		margin-bottom: 20%;
 	}
 }
 

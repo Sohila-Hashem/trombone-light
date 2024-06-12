@@ -76,7 +76,7 @@
 			<img class="header__img" src="images/header.png" alt="banner image" />
 			<blockquote class="header__heading">
 				<p>music is life itself</p>
-				<figcaption>__ Louis Armstrong</figcaption>
+				<cite>—Louis Armstrong</cite>
 			</blockquote>
 		</section>
 
@@ -99,35 +99,43 @@
 				src="images/undraw_People_search_re_5rre.png"
 				alt="avatar"
 			/>
-		</section>
-
-		<!-- plans section -->
-		<section id="plans-container">
 			<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
 				<path
-					fill="rgb(0, 45, 45)"
+					fill="var(--primary-color)"
 					fill-opacity="1"
 					d="M0,320L120,298.7C240,277,480,235,720,229.3C960,224,1200,256,1320,272L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
 				></path>
 			</svg> -->
+		</section>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="plans__svg">
+			<path
+				fill="var(--secondary-color)"
+				fill-opacity="1"
+				d="M0,160L48,176C96,192,192,224,288,218.7C384,213,480,171,576,144C672,117,768,107,864,128C960,149,1056,203,1152,197.3C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+			></path>
+		</svg>
+
+		<!-- plans section -->
+		<section id="plans" class="plans">
 			<h2 class="plans__heading section__heading">
 				what do we offer?
 				<span class="section__heading__icon">&#9834;</span>
 			</h2>
-			<p id="plans-text-intro" class="section__content">
+
+			<p class="plans__content section__content">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet corporis
 				voluptas dolorem, totam magnam! Exercitationem ipsa aliquam, distinctio non
 				cupiditate, a omnis eveniet optio excepturi totam quod, vero vel.
 			</p>
-			<div id="cards-container">
-				<div class="card">
-					<div class="card-img-container">
-						<img class="card-img" src="images/tenor.jpg" alt="tenor Trombone" />
-					</div>
-					<p class="card-header">tenor trombone</p>
-					<div class="card-info-container">
-						<p class="card-price">$600</p>
-						<p class="card-info">
+
+			<div class="plans__cards">
+				<div class="plans__card">
+					<img class="plans__card__img" src="images/tenor.jpg" alt="tenor Trombone" />
+					<div class="plans__card__info">
+						<p class="plans__card__info__heading">tenor trombone</p>
+						<p class="plans__card__info__price">$600</p>
+						<p class="plans__card__info__summery">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
 							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
 							error?
@@ -135,14 +143,12 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-img-container">
-						<img class="card-img" src="images/bass.jpg" alt="tenor Trombone" />
-					</div>
-					<p class="card-header">bass trombone</p>
-					<div class="card-info-container">
-						<p class="card-price">$900</p>
-						<p class="card-info">
+				<div class="plans__card">
+					<img class="plans__card__img" src="images/bass.jpg" alt="tenor Trombone" />
+					<div class="plans__card__info">
+						<p class="plans__card__info__heading">bass trombone</p>
+						<p class="plans__card__info__price">$900</p>
+						<p class="plans__card__info__summery">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
 							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
 							error?
@@ -150,14 +156,12 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-img-container">
-						<img class="card-img" src="images/valve.jpg" alt="tenor Trombone" />
-					</div>
-					<p class="card-header">valve trombone</p>
-					<div class="card-info-container">
-						<p class="card-price">$1100</p>
-						<p class="card-info">
+				<div class="plans__card">
+					<img class="plans__card__img" src="images/valve.jpg" alt="tenor Trombone" />
+					<div class="plans__card__info">
+						<p class="plans__card__info__heading">valve trombone</p>
+						<p class="plans__card__info__price">$1100</p>
+						<p class="plans__card__info__summery">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
 							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
 							error?
@@ -165,14 +169,20 @@
 					</div>
 				</div>
 			</div>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
-				<path
-					fill="#f0fffb"
-					fill-opacity="1"
-					d="M0,32L720,256L1440,0L1440,320L720,320L0,320Z"
-				></path>
-			</svg>
 		</section>
+
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="testimonials__svg"
+			aria-hidden="true"
+		>
+			<path
+				fill="var(--secondary-color)"
+				fill-opacity="1"
+				d="M0,32L720,256L1440,0L1440,320L720,320L0,320Z"
+			></path>
+		</svg>
 
 		<!-- testmonials section -->
 		<h2 class="section__heading testimonials__heading">
@@ -237,15 +247,21 @@
 			</div>
 		</section>
 
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="contact__svg"
+			aria-hidden="true"
+		>
+			<path
+				fill="var(--primary-color)"
+				fill-opacity="1"
+				d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+			></path>
+		</svg>
+
 		<!-- contact section -->
 		<div id="contact-header-container">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
-				<path
-					fill="rgb(0, 45, 45)"
-					fill-opacity="1"
-					d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
-				></path>
-			</svg>
 			<h2 class="contact__heading section__heading">
 				contact us
 				<span class="section__heading__icon">&#9834;</span>
@@ -341,19 +357,18 @@
 			</div>
 		</section>
 
+		<svg xmlns="http://www.w3.org/2000/svg" class="footer__svg" viewBox="0 0 1440 320">
+			<path
+				fill="var(--primary-color)"
+				fill-opacity="1"
+				d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+			></path>
+		</svg>
+
 		<!-- footer section -->
-		<div id="footer-wave-shape-container" aria-hidden="true">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path
-					fill="rgb(0, 45, 45)"
-					fill-opacity="1"
-					d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-				></path>
-			</svg>
-		</div>
-		<footer>
+		<footer class="footer">
 			<div id="social-media-container">
-				<h2 class="section-header social-media-header">
+				<h2 class="section__heading social-media-header">
 					find us on social media
 					<span class="section__heading__icon">&#9834;</span>
 				</h2>
@@ -370,8 +385,8 @@
 				</div>
 			</div>
 			<div id="me-container">
-				<p>Made with love by <a href="https://github.com/Sohila-Samir">Sto</a></p>
-				<p>&copy; 2022</p>
+				<p>Made with love by <a href="https://github.com/Sohila-Hashem">Stormy</a></p>
+				<p>&copy; 2024</p>
 			</div>
 		</footer>
 		<script src="js/app.js" defer></script>
