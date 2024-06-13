@@ -32,7 +32,6 @@ overlay.addEventListener("click", (e) => {
 });
 
 // Navbar
-
 navHamburgers.forEach((hamburger) => {
 	hamburger.addEventListener("click", (e) => {
 		NavbarUtils.toggleNav(e);

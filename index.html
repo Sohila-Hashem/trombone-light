@@ -26,45 +26,56 @@
 	<body>
 		<!-- navbar section -->
 		<div aria-hidden="true" class="overlay"></div>
-		<nav class="navbar">
+		<nav class="navbar" aria-label="nav bar">
 			<div class="navbar__logo" aria-hidden="true">
 				<span class="navbar__logo__word1">T</span>
 				<span class="navbar__logo__word2">Light</span>
 			</div>
 
-			<div class="navbar__burger navbar__burger--closed">
-				<span class="navbar__burger__bar navbar__burger__bar-1"></span>
-				<span class="navbar__burger__bar navbar__burger__bar-2"></span>
-				<span class="navbar__burger__bar navbar__burger__bar-3"></span>
-			</div>
+			<button
+				class="navbar__burger navbar__burger--closed"
+				aria-label="open side menu"
+				aria-controls="main menu"
+			>
+				<span class="navbar__burger__bar navbar__burger__bar-1" aria-hidden="true"></span>
+				<span class="navbar__burger__bar navbar__burger__bar-2" aria-hidden="true"></span>
+				<span class="navbar__burger__bar navbar__burger__bar-3" aria-hidden="true"></span>
+			</button>
 
-			<div class="navbar__list">
-				<div class="navbar__burger navbar__burger--opened">
+			<div id="main menu" class="navbar__list" role="menu" aria-label="main menu">
+				<button
+					class="navbar__burger navbar__burger--opened"
+					aria-label="close side menu"
+					aria-controls="main menu"
+				>
 					<span
 						class="navbar__burger__bar navbar__burger__bar-1 navbar__burger__bar-1--close"
+						aria-hidden="true"
 					></span>
 					<span
 						class="navbar__burger__bar navbar__burger__bar-2 navbar__burger__bar-2--close"
+						aria-hidden="true"
 					></span>
 					<span
 						class="navbar__burger__bar navbar__burger__bar-3 navbar__burger__bar-3--close"
+						aria-hidden="true"
 					></span>
-				</div>
+				</button>
 
-				<ul class="navbar__links">
-					<li class="navbar__links__item">
+				<ul class="navbar__links" role="menu" aria-label="navigation links">
+					<li class="navbar__links__item" role="menuitem">
 						<a class="navbar__link" href="#about">About</a>
 					</li>
 
-					<li class="navbar__links__item">
-						<a class="navbar__link" href="#plans-container">Plans</a>
+					<li class="navbar__links__item" role="menuitem">
+						<a class="navbar__link" href="#products">Plans</a>
 					</li>
 
-					<li class="navbar__links__item">
-						<a class="navbar__link" href="#main-testimonials-container">clients</a>
+					<li class="navbar__links__item" role="menuitem">
+						<a class="navbar__link" href="#testimonials">Testimonials</a>
 					</li>
 
-					<li class="navbar__links__item">
+					<li class="navbar__links__item" role="menuitem">
 						<a class="navbar__link" href="#contact-header-container">Contact</a>
 					</li>
 				</ul>
@@ -72,43 +83,52 @@
 		</nav>
 
 		<!-- header section -->
-		<section id="header" class="header">
-			<img class="header__img" src="images/header.png" alt="banner image" />
+		<header id="header" class="header" aria-label="header">
+			<img
+				class="header__img"
+				src="images/header.png"
+				alt="banner image"
+				aria-hidden="true"
+			/>
+
 			<blockquote class="header__heading">
-				<p>music is life itself</p>
-				<cite>—Louis Armstrong</cite>
+				<p id="quote author">music is life itself</p>
+				<footer><cite>—Louis Armstrong</cite></footer>
 			</blockquote>
-		</section>
+		</header>
 
 		<!-- about section -->
-		<section id="about" class="about">
-			<div class="about__content--wrapper">
-				<h1 class="about__heading section__heading">
-					who we are?
-					<span class="section__heading__icon">&#9834;</span>
-				</h1>
-				<p class="about__content section__content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto
-					non error odio velit, at veniam quibusdam cum aliquid provident illo possimus
-					perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
-				</p>
-			</div>
+		<section
+			id="about"
+			class="about"
+			aria-label="About section"
+			aria-describedby="About-abstract"
+		>
+			<h1 class="about__heading section__heading">
+				who we are?
+				<span class="section__heading__icon">&#9834;</span>
+			</h1>
+
+			<p id="About-abstract" class="about__abstract section__abstract">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto non
+				error odio velit, at veniam quibusdam cum aliquid provident illo possimus
+				perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
+			</p>
+
 			<img
 				class="about__img"
-				aria-hidden="true"
 				src="images/undraw_People_search_re_5rre.png"
 				alt="avatar"
+				aria-hidden="true"
 			/>
-			<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
-				<path
-					fill="var(--primary-color)"
-					fill-opacity="1"
-					d="M0,320L120,298.7C240,277,480,235,720,229.3C960,224,1200,256,1320,272L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-				></path>
-			</svg> -->
 		</section>
 
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="plans__svg">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="products__svg"
+			aria-hidden="true"
+		>
 			<path
 				fill="var(--secondary-color)"
 				fill-opacity="1"
@@ -116,59 +136,122 @@
 			></path>
 		</svg>
 
-		<!-- plans section -->
-		<section id="plans" class="plans">
-			<h2 class="plans__heading section__heading">
+		<!-- products section -->
+		<section
+			id="products"
+			class="products"
+			aria-label="products section"
+			aria-describedby="section__abstract"
+		>
+			<h1 id="section__heading" class="products__heading section__heading">
 				what do we offer?
 				<span class="section__heading__icon">&#9834;</span>
-			</h2>
+			</h1>
 
-			<p class="plans__content section__content">
+			<p
+				id="section__abstract"
+				class="products__abstract section__abstract"
+				aria-label="section illustration"
+			>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet corporis
 				voluptas dolorem, totam magnam! Exercitationem ipsa aliquam, distinctio non
 				cupiditate, a omnis eveniet optio excepturi totam quod, vero vel.
 			</p>
 
-			<div class="plans__cards">
-				<div class="plans__card">
-					<img class="plans__card__img" src="images/tenor.jpg" alt="tenor Trombone" />
-					<div class="plans__card__info">
-						<p class="plans__card__info__heading">tenor trombone</p>
-						<p class="plans__card__info__price">$600</p>
-						<p class="plans__card__info__summery">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
-							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
-							error?
-						</p>
-					</div>
-				</div>
+			<ul class="products__list" aria-label="products list">
+				<li
+					class="products__list__item"
+					aria-label="product"
+					aria-describedby="tenor__list__item__summery"
+				>
+					<img
+						class="products__list__item__img"
+						src="images/tenor.jpg"
+						alt="tenor Trombone"
+					/>
 
-				<div class="plans__card">
-					<img class="plans__card__img" src="images/bass.jpg" alt="tenor Trombone" />
-					<div class="plans__card__info">
-						<p class="plans__card__info__heading">bass trombone</p>
-						<p class="plans__card__info__price">$900</p>
-						<p class="plans__card__info__summery">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
-							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
-							error?
-						</p>
-					</div>
-				</div>
+					<div class="products__list__item__info--wrapper">
+						<h2 id="tenor__list__item__heading" class="products__list__item__heading">
+							tenor trombone
+						</h2>
 
-				<div class="plans__card">
-					<img class="plans__card__img" src="images/valve.jpg" alt="tenor Trombone" />
-					<div class="plans__card__info">
-						<p class="plans__card__info__heading">valve trombone</p>
-						<p class="plans__card__info__price">$1100</p>
-						<p class="plans__card__info__summery">
+						<p class="products__list__item__price" aria-label="trombone price">$600</p>
+
+						<p
+							id="tenor__list__item__summery"
+							class="products__list__item__summery"
+							aria-label="trombone overview"
+						>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
 							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
 							error?
 						</p>
 					</div>
-				</div>
-			</div>
+					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+				</li>
+
+				<li
+					class="products__list__item"
+					aria-label="product"
+					aria-describedby="bass__list__item__summery"
+				>
+					<img
+						class="products__list__item__img"
+						src="images/bass.jpg"
+						alt="bass Trombone"
+					/>
+
+					<div class="products__list__item__info--wrapper">
+						<h2 id="bass__list__item__heading" class="products__list__item__heading">
+							bass trombone
+						</h2>
+
+						<p class="products__list__item__price" aria-label="trombone price">$900</p>
+
+						<p
+							id="bass__list__item__summery"
+							class="products__list__item__summery"
+							aria-label="trombone overview"
+						>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
+							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
+							error?
+						</p>
+					</div>
+					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+				</li>
+
+				<li
+					class="products__list__item"
+					aria-label="product"
+					aria-describedby="valve__list__item__summery"
+				>
+					<img
+						class="products__list__item__img"
+						src="images/valve.jpg"
+						alt="valve Trombone"
+					/>
+
+					<div class="products__list__item__info--wrapper">
+						<h2 id="valve__list__item__heading" class="products__list__item__heading">
+							valve trombone
+						</h2>
+
+						<p class="products__list__item__price" aria-label="trombone price">$1100</p>
+
+						<p
+							id="valve__list__item__summery"
+							class="products__list__item__summery"
+							aria-label="trombone overview"
+						>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, qui
+							alias atque voluptatem, libero odio, modi nisi temporibus nihil illo
+							error?
+						</p>
+					</div>
+					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+				</li>
+			</ul>
 		</section>
 
 		<svg
@@ -184,67 +267,104 @@
 			></path>
 		</svg>
 
-		<!-- testmonials section -->
-		<h2 class="section__heading testimonials__heading">
-			know us better
-			<span class="section__heading__icon">&#9834;</span>
-		</h2>
-		<section id="main-testimonials-container">
-			<div id="testimonial-cards-container">
-				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
-					<h3 class="testimonial__author">Matthew Griffin</h3>
-					<p class="testimonial__feedback">
+		<!-- testimonials section -->
+		<section id="testimonials" class="testimonials" aria-label="testimonials section">
+			<h1 id="testimonials__heading" class="section__heading testimonials__heading">
+				know us better
+				<span class="section__heading__icon">&#9834;</span>
+			</h1>
+
+			<img
+				class="testimonials__img"
+				src="images/undraw_product_iteration_kjok.png"
+				alt="avatar"
+				aria-hidden="true"
+			/>
+
+			<ul class="testimonials__cards" aria-label="testimonials">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2 class="testimonials__card__author" aria-label="testimonial author">
+						Matthew Griffin
+					</h2>
+					<p class="testimonials__card__feedback" aria-label="testimonial content">
 						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
 						beatae atque, odio adipisci eos.
 					</p>
-				</div>
+				</li>
 
-				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
-					<h3 class="testimonial__author">Jessie Hopkins</h3>
-					<p class="testimonial__feedback">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2 class="testimonials__card__author" aria-label="testimonial author">
+						Jessie Hopkins
+					</h2>
+					<p class="testimonials__card__feedback" aria-label="testimonial content">
 						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
 						beatae atque, odio adipisci eos.
 					</p>
-				</div>
+				</li>
 
-				<div class="testimonial-card" role="">
-					<h3 class="testimonial__author">Carla Lamb</h3>
-					<p class="testimonial__feedback">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2 class="testimonials__card__author" aria-label="testimonial author">
+						Carla Lamb
+					</h2>
+					<p class="testimonials__card__feedback" aria-label="testimonial content">
 						Lorem ipsum dolor sit amet tae atque, odio adipisci eos.
 					</p>
-				</div>
+				</li>
 
-				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
-					<h3 class="testimonial__author">Mike Little</h3>
-					<p class="testimonial__feedback">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2
+						id="testimonials__card__author"
+						class="testimonials__card__author"
+						aria-label="testimonial author"
+					>
+						Mike Little
+					</h2>
+					<p
+						id="testimonials__card__feedback"
+						class="testimonials__card__feedback"
+						aria-label="testimonial content"
+					>
 						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
 						beatae atque, odio adipisci eos.
 					</p>
-				</div>
+				</li>
 
-				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
-					<h3 class="testimonial__author">Jose Alexander</h3>
-					<p class="testimonial__feedback">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2
+						id="testimonials__card__author"
+						class="testimonials__card__author"
+						aria-label="testimonial author"
+					>
+						Jose Alexander
+					</h2>
+					<p
+						id="testimonials__card__feedback"
+						class="testimonials__card__feedback"
+						aria-label="testimonial content"
+					>
 						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
 						beatae atque, odio adipisci eos.
 					</p>
-				</div>
+				</li>
 
-				<div class="testimonial-card" role="region" aria-labelledby="testimonial__author">
-					<h3 class="testimonial__author">Earl Lewis</h3>
-					<p class="testimonial__feedback">
+				<li class="testimonials__card" aria-label="testimonial card">
+					<h2
+						id="testimonials__card__author"
+						class="testimonials__card__author"
+						aria-label="testimonial author"
+					>
+						Earl Lewis
+					</h2>
+					<p
+						id="testimonials__card__feedback"
+						class="testimonials__card__feedback"
+						aria-label="testimonial content"
+					>
 						Lorem ipsum dolor sit amet porro, saepe accusantium incidunt dolore quae
 						beatae atque, odio adipisci eos.
 					</p>
-				</div>
-			</div>
-			<div id="clients-avatar-img-container">
-				<img
-					id="clients-avatar-img"
-					src="images/undraw_product_iteration_kjok.png"
-					alt="avatar"
-				/>
-			</div>
+				</li>
+			</ul>
 		</section>
 
 		<svg
@@ -262,11 +382,11 @@
 
 		<!-- contact section -->
 		<div id="contact-header-container">
-			<h2 class="contact__heading section__heading">
+			<h1 class="contact__heading section__heading">
 				contact us
 				<span class="section__heading__icon">&#9834;</span>
-			</h2>
-			<p class="contact__content section__content">
+			</h1>
+			<p class="contact__abstract section__abstract">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad unde ut, odit
 				harum voluptatem omnis recusandae culpa eligendi earum dignissimos iure, fugiat
 				veritatis deleniti amet sit magni praesentium expedita!
@@ -357,7 +477,12 @@
 			</div>
 		</section>
 
-		<svg xmlns="http://www.w3.org/2000/svg" class="footer__svg" viewBox="0 0 1440 320">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="footer__svg"
+			aria-hidden="true"
+		>
 			<path
 				fill="var(--primary-color)"
 				fill-opacity="1"
@@ -368,10 +493,10 @@
 		<!-- footer section -->
 		<footer class="footer">
 			<div id="social-media-container">
-				<h2 class="section__heading social-media-header">
+				<h1 class="section__heading social-media-header">
 					find us on social media
 					<span class="section__heading__icon">&#9834;</span>
-				</h2>
+				</h1>
 				<div id="social-media-icons-container">
 					<a href="#">
 						<i class="fa-brands fa-facebook-f"></i>

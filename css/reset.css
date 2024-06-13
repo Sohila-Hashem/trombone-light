@@ -3,24 +3,20 @@
 	--accent-color: rgb(128, 0, 0);
 	--primary-color: rgb(0, 45, 45);
 	--secondary-color: rgba(240, 255, 251, 1);
-	--gold-gradient: linear-gradient(
+	--product-heading-bg-color: rgb(243, 243, 231);
+	--fallback-gradient: linear-gradient(
 		90deg,
 		rgb(151, 114, 29) 0%,
 		rgb(244, 240, 181) 0%,
 		rgb(229, 191, 85) 100%
 	);
 }
-
-img,
-svg {
-	width: 100%;
-	display: block;
-}
-
 * {
 	box-sizing: border-box;
 	position: relative;
 	user-select: none;
+	padding: 0;
+	margin: 0;
 }
 html,
 body,
@@ -37,7 +33,6 @@ abbr,
 acronym,
 address,
 big,
-cite,
 code,
 del,
 dfn,
