@@ -3,74 +3,87 @@ p {
 }
 
 .section__heading {
-	margin-inline: auto;
-	margin-block: 1em;
 	font-size: 2.6em;
 	width: fit-content;
+	margin-block-start: 2em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	.section__heading__icon {
+		width: 100%;
+		text-align: center;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			background: var(--fallback-gradient);
+			height: 0.2rem;
+			width: 45%;
+			bottom: 0;
+			top: 50%;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
 }
 
 .section__abstract {
-	font-size: 1.3em;
-}
-
-.section__heading__icon {
-	width: 100%;
+	width: fit-content;
+	font-size: 1.2em;
 	text-align: center;
+
+	@media screen and (min-width: 600px) {
+		max-width: 75%;
+	}
 }
 
-.section__heading__icon::before,
-.section__heading__icon::after {
-	position: absolute;
-	content: "";
-	background: var(--fallback-gradient);
-	height: 0.2rem;
-	width: 45%;
-	bottom: 0;
-	top: 50%;
+:is(.cta-btn, .cta-btn--variant, .secondary-btn) {
+	font-size: 1em;
+	width: fit-content;
+	padding: 1em;
+	border: 2px solid transparent;
+	border-radius: 0.5em;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
 }
 
-.section__heading__icon::before {
-	left: 0;
-}
-
-.section__heading__icon::after {
-	right: 0;
+.secondary-btn {
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	background-color: var(--secondary-color);
 }
 
 .cta-btn {
-	width: fit-content;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	padding: 0.5em;
-	border: 2px solid transparent;
-	border-radius: 0.5em;
-	transition: all 0.4s ease-in-out;
 }
 
-.cta-btn:hover,
-.cta-btn:focus {
+.cta-btn--variant {
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+}
+
+:is(.cta-btn, .cta-btn--variant):hover {
 	color: var(--primary-color);
 	background-color: var(--secondary-color);
 	border-color: var(--primary-color);
 }
 
-.secondary-btn {
-	width: fit-content;
-	padding: 2em;
-	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
-	background-color: var(--secondary-color);
-	border-radius: 0.3em;
-	transition: all 0.4s ease-in-out;
-}
-
-.secondary-btn:hover,
-.secondary-btn:focus {
+.secondary-btn:hover {
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 	border-color: transparent;
+}
+
+:is(button, input, textarea, .secondary-btn, .cta-btn, .cta-btn--variant):focus {
+	outline: 2px solid var(--fallback-color);
 }

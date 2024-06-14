@@ -1,0 +1,16 @@
+{
+	"name": "trombone-light",
+	"version": "1.0.0",
+	"description": "static responsive landing page for trombones, consisting of 5 sections:",
+	"main": "postcss.config.js",
+	"scripts": {
+		"minify-css": "npx postcss css/style.css > css/main.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"cssnano": "^7.0.2",
+		"postcss": "^8.4.38",
+		"postcss-cli": "^11.0.0"
+	}
+}

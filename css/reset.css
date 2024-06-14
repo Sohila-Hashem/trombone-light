@@ -1,15 +1,11 @@
 :root {
-	--fallback-color: rgba(174, 134, 37, 1);
-	--accent-color: rgb(128, 0, 0);
-	--primary-color: rgb(0, 45, 45);
-	--secondary-color: rgba(240, 255, 251, 1);
-	--product-heading-bg-color: rgb(243, 243, 231);
-	--fallback-gradient: linear-gradient(
-		90deg,
-		rgb(151, 114, 29) 0%,
-		rgb(244, 240, 181) 0%,
-		rgb(229, 191, 85) 100%
-	);
+	--box-shadow: #00000066;
+	--fallback-color: #ae8625;
+	--accent-color: #800000;
+	--primary-color: #002d2d;
+	--secondary-color: #f0fffb;
+	--product-heading-bg-color: #f3f3e7;
+	--fallback-gradient: linear-gradient(90deg, #97721d 0%, #f4f0b5 0%, #e5bf55 100%);
 }
 * {
 	box-sizing: border-box;
@@ -125,7 +121,8 @@ body {
 	background-color: #f0fffb;
 }
 ol,
-ul {
+ul,
+menu {
 	list-style: none;
 }
 blockquote,

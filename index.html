@@ -20,7 +20,7 @@
 		<!-- css components stylesheet-->
 		<link rel="stylesheet" href="css/components.css" />
 		<!--rendering the main css file -->
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/main.css" />
 		<title>Trombone Light</title>
 	</head>
 	<body>
@@ -62,7 +62,7 @@
 					></span>
 				</button>
 
-				<ul class="navbar__links" role="menu" aria-label="navigation links">
+				<menu class="navbar__links" role="menu" aria-label="navigation links">
 					<li class="navbar__links__item" role="menuitem">
 						<a class="navbar__link" href="#about">About</a>
 					</li>
@@ -78,7 +78,7 @@
 					<li class="navbar__links__item" role="menuitem">
 						<a class="navbar__link" href="#contact-header-container">Contact</a>
 					</li>
-				</ul>
+				</menu>
 			</div>
 		</nav>
 
@@ -89,6 +89,7 @@
 				src="images/header.png"
 				alt="banner image"
 				aria-hidden="true"
+				loading="lazy"
 			/>
 
 			<blockquote class="header__heading">
@@ -117,9 +118,10 @@
 
 			<img
 				class="about__img"
-				src="images/undraw_People_search_re_5rre.png"
+				src="images/about.png"
 				alt="avatar"
 				aria-hidden="true"
+				loading="lazy"
 			/>
 		</section>
 
@@ -168,6 +170,7 @@
 						class="products__list__item__img"
 						src="images/tenor.jpg"
 						alt="tenor Trombone"
+						loading="lazy"
 					/>
 
 					<div class="products__list__item__info--wrapper">
@@ -187,7 +190,7 @@
 							error?
 						</p>
 					</div>
-					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+					<a class="products__list__item__cta secondary-btn" href="#">Know More</a>
 				</li>
 
 				<li
@@ -199,6 +202,7 @@
 						class="products__list__item__img"
 						src="images/bass.jpg"
 						alt="bass Trombone"
+						loading="lazy"
 					/>
 
 					<div class="products__list__item__info--wrapper">
@@ -218,7 +222,7 @@
 							error?
 						</p>
 					</div>
-					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+					<a class="products__list__item__cta secondary-btn" href="#">Know More</a>
 				</li>
 
 				<li
@@ -230,6 +234,7 @@
 						class="products__list__item__img"
 						src="images/valve.jpg"
 						alt="valve Trombone"
+						loading="lazy"
 					/>
 
 					<div class="products__list__item__info--wrapper">
@@ -249,7 +254,7 @@
 							error?
 						</p>
 					</div>
-					<a class="products__list__item__cta cta-btn" href="#">Know More</a>
+					<a class="products__list__item__cta secondary-btn" href="#">Know More</a>
 				</li>
 			</ul>
 		</section>
@@ -276,9 +281,10 @@
 
 			<img
 				class="testimonials__img"
-				src="images/undraw_product_iteration_kjok.png"
+				src="images/testimonials.png"
 				alt="avatar"
 				aria-hidden="true"
+				loading="lazy"
 			/>
 
 			<ul class="testimonials__cards" aria-label="testimonials">
@@ -374,107 +380,112 @@
 			aria-hidden="true"
 		>
 			<path
-				fill="var(--primary-color)"
+				fill="var(--secondary-color)"
 				fill-opacity="1"
 				d="M0,224L120,234.7C240,245,480,267,720,229.3C960,192,1200,96,1320,48L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
 			></path>
 		</svg>
 
 		<!-- contact section -->
-		<div id="contact-header-container">
-			<h1 class="contact__heading section__heading">
-				contact us
-				<span class="section__heading__icon">&#9834;</span>
-			</h1>
-			<p class="contact__abstract section__abstract">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad unde ut, odit
-				harum voluptatem omnis recusandae culpa eligendi earum dignissimos iure, fugiat
-				veritatis deleniti amet sit magni praesentium expedita!
-			</p>
-		</div>
-		<section id="main-contact-container">
-			<form action="#" id="contact-form">
-				<div class="form-input-container">
-					<label for="firstname" class="form-label">firstname: </label>
-					<input
-						type="text"
-						name="firstname"
-						id="firstname"
-						class="form-input"
-						placeholder="Jane"
-						required
-					/>
-				</div>
-
-				<div class="form-input-container">
-					<label for="lastname" class="form-label">lastname: </label>
-					<input
-						type="text"
-						name="lastname"
-						id="lastname"
-						class="form-input"
-						placeholder="Doe"
-						required
-					/>
-				</div>
-
-				<div class="form-input-container">
-					<label for="mobile" class="form-label">mobile: </label>
-					<input
-						type="tel"
-						name="mobie"
-						id="mobile"
-						class="form-input"
-						placeholder="+1 (123) 456-7890"
-						required
-					/>
-				</div>
-
-				<div class="form-input-container">
-					<label for="email" class="form-label">email: </label>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						class="form-input"
-						placeholder="example@domain.com"
-						required
-					/>
-				</div>
-
-				<div class="form-input-container">
-					<label for="address" class="form-label">address: </label>
-					<input
-						type="text"
-						name="address"
-						id="address"
-						class="form-input"
-						placeholder="1234 Main St, Apartment 1B, Springfield, IL 62704"
-						required
-					/>
-				</div>
-
-				<div class="form-input-container">
-					<label for="message" class="form-label">message: </label>
-					<textarea
-						name="message"
-						id="message-textarea"
-						class="form-input"
-						rows="5"
-						placeholder="send us a message and we will contact you..."
-						required
-					></textarea>
-				</div>
-
-				<button type="submit" id="submit-btn" data-submitBtn="submit">submit</button>
-			</form>
-			<div id="contact-avatar-img-container">
-				<img
-					id="contact-avatar-img"
-					src="images/undraw_Contact_us_re_4qqt.png"
-					alt="avatar"
-				/>
+		<section id="contact-us" class="contact-us" aria-label="contact-us section">
+			<div class="contact-us__section-info--wrapper" role="none">
+				<h1 class="contact-us__heading section__heading">
+					contact us
+					<span class="section__heading__icon">&#9834;</span>
+				</h1>
+				<p
+					id="Contact-us-abstract"
+					class="contact-us__abstract section__abstract"
+					aria-label="section illustration"
+				>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem iusto
+					non error odio velit, at veniam quibusdam cum aliquid provident illo possimus
+					perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
+				</p>
 			</div>
+
+			<form action="#" class="contact-us__form">
+				<fieldset class="contact-us__form__set contact-us__form__set__personal">
+					<legend class="contact-us__form__set__title">Personal Information</legend>
+
+					<div class="contact-us__form__field-wrapper">
+						<label for="firstname" class="contact-us__form__label">firstname</label>
+						<input
+							type="text"
+							name="firstname"
+							id="firstname"
+							class="contact-us__form__input"
+							placeholder="Jane"
+							spellcheck="true"
+							maxlength="20"
+							required
+						/>
+					</div>
+
+					<div class="contact-us__form__field-wrapper">
+						<label for="lastname" class="contact-us__form__label">lastname</label>
+						<input
+							type="text"
+							name="lastname"
+							id="lastname"
+							class="contact-us__form__input"
+							placeholder="Doe"
+							spellcheck="true"
+							maxlength="20"
+							required
+						/>
+					</div>
+
+					<div class="contact-us__form__field-wrapper">
+						<label for="mobile" class="contact-us__form__label">mobile</label>
+						<input
+							type="tel"
+							name="mobie"
+							id="mobile"
+							class="contact-us__form__input"
+							placeholder="+1 (123) 456-7890"
+							maxlength="11"
+							required
+						/>
+					</div>
+
+					<div class="contact-us__form__field-wrapper">
+						<label for="email" class="contact-us__form__label">email</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="contact-us__form__input"
+							placeholder="example@domain.com"
+							spellcheck="true"
+							maxlength="254"
+							required
+						/>
+					</div>
+				</fieldset>
+
+				<fieldset class="contact-us__form__set contact-us__form__set__additional">
+					<legend class="contact-us__form__set__title">Additional Information</legend>
+
+					<div class="contact-us__form__field-wrapper">
+						<label for="message-textarea" class="contact-us__form__label"
+							>message</label
+						>
+						<textarea
+							name="message"
+							id="message-textarea"
+							class="contact-us__form__input"
+							rows="5"
+							placeholder="send us a message and we will contact you..."
+							spellcheck="true"
+							required
+							maxlength="250"
+						></textarea>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="contact-us__form__btn cta-btn--variant">submit</button>
+			</form>
 		</section>
 
 		<svg
@@ -484,7 +495,7 @@
 			aria-hidden="true"
 		>
 			<path
-				fill="var(--primary-color)"
+				fill="var(--secondary-color)"
 				fill-opacity="1"
 				d="M0,224L40,224C80,224,160,224,240,229.3C320,235,400,245,480,240C560,235,640,213,720,208C800,203,880,213,960,213.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
 			></path>
@@ -492,28 +503,38 @@
 
 		<!-- footer section -->
 		<footer class="footer">
-			<div id="social-media-container">
-				<h1 class="section__heading social-media-header">
-					find us on social media
-					<span class="section__heading__icon">&#9834;</span>
-				</h1>
-				<div id="social-media-icons-container">
-					<a href="#">
-						<i class="fa-brands fa-facebook-f"></i>
+			<h1 class="section__heading footer__heading">
+				find us on social media
+				<span class="section__heading__icon" aria-hidden="true">&#9834;</span>
+			</h1>
+
+			<menu class="footer__social-media" role="menu" aria-label="social-media links menu">
+				<li class="footer__social-media__item" role="menuitem">
+					<a href="#" class="footer__social-media__link">
+						facbook
+						<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
 					</a>
-					<a href="#">
-						<i class="fab fa-instagram"></i>
+				</li>
+				<li class="footer__social-media__item" role="menuitem">
+					<a href="#" class="footer__social-media__link">
+						instagram
+						<i class="fab fa-instagram" aria-hidden="true"></i>
 					</a>
-					<a href="#">
-						<i class="fa-brands fa-twitter"></i>
+				</li>
+				<li class="footer__social-media__item" role="menuitem">
+					<a href="#" class="footer__social-media__link">
+						twitter
+						<i class="fa-brands fa-twitter" aria-hidden="true"></i>
 					</a>
-				</div>
-			</div>
-			<div id="me-container">
-				<p>Made with love by <a href="https://github.com/Sohila-Hashem">Stormy</a></p>
-				<p>&copy; 2024</p>
-			</div>
+				</li>
+			</menu>
+
+			<span class="footer__website-maker"
+				>Made by <a href="https://github.com/Sohila-Hashem">Storm</a></span
+			>
+			<span aria-hidden="true">&copy; 2024</span>
 		</footer>
+
 		<script src="js/app.js" defer></script>
 	</body>
 </html>

@@ -12,16 +12,19 @@ class NavbarUtils {
 }
 
 // -----------------LISTENERS-----------------
-// Document
-document.addEventListener("scroll", (e) => {
-	const navbar = document.querySelector(".navbar");
+window.addEventListener(
+	"scroll",
+	(e) => {
+		const navbar = document.querySelector(".navbar");
 
-	if (window.scrollY > 50) {
-		navbar.classList.add("navbar--highlight");
-	} else {
-		navbar.classList.remove("navbar--highlight");
-	}
-});
+		if (window.scrollY > 50) {
+			navbar.classList.add("navbar--highlight");
+		} else {
+			navbar.classList.remove("navbar--highlight");
+		}
+	},
+	{ passive: true }
+);
 
 overlay.addEventListener("click", (e) => {
 	const navbarList = document.querySelector(".navbar__list");
@@ -31,7 +34,6 @@ overlay.addEventListener("click", (e) => {
 	}
 });
 
-// Navbar
 navHamburgers.forEach((hamburger) => {
 	hamburger.addEventListener("click", (e) => {
 		NavbarUtils.toggleNav(e);
