@@ -8,18 +8,22 @@
 }
 
 *::-webkit-scrollbar {
-	height: 0.5em;
-	width: 0.7em;
+	height: 0.5rem;
+	width: 0.7rem;
 }
 
 *::-webkit-scrollbar-thumb {
 	cursor: pointer;
 	background: var(--fallback-color);
-	border-radius: 0.5em;
+	border-radius: 0.5rem;
 }
 
 section {
-	padding: 1em;
+	padding: 1rem;
+
+	@media screen and (min-width: 992px) {
+		padding: 2rem;
+	}
 }
 
 /* -------------------------- navbar section ------------------------------- */
@@ -45,17 +49,17 @@ section {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 0.5em 1em;
+	padding: 0.5rem 1rem;
 	z-index: 10000;
 	transition: all 0.25s ease-in-out;
 
 	.navbar__logo {
 		display: flex;
 		align-items: center;
-		margin-inline-end: 3em;
+		margin-inline-end: 3rem;
 
 		.navbar__logo__word1 {
-			font-size: 4em;
+			font-size: 4rem;
 			color: transparent;
 			background: var(--fallback-gradient);
 			background-clip: text;
@@ -63,7 +67,7 @@ section {
 
 		.navbar__logo__word2 {
 			color: var(--secondary-color);
-			font-size: 1.5em;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -77,7 +81,7 @@ section {
 		top: 0;
 		right: -100%;
 		height: 100vh;
-		padding: 2.5em 2em;
+		padding: 2.5rem 2rem;
 		background: var(--accent-color);
 		opacity: 0;
 		transition: right 0.4s ease-in-out, opacity 0.3s 0.1s ease-in-out;
@@ -86,12 +90,12 @@ section {
 			width: 100%;
 			display: flex;
 			flex-direction: column;
-			gap: 2em;
+			gap: 2rem;
 
 			.navbar__link {
 				width: fit-content;
 				color: var(--secondary-color);
-				font-size: 1.1em;
+				font-size: 1.1rem;
 
 				&::after {
 					content: "";
@@ -99,7 +103,7 @@ section {
 					left: 0;
 					width: 0;
 					bottom: -40%;
-					height: 0.1em;
+					height: 0.1rem;
 					background: var(--fallback-gradient);
 					transition: all 0.3s ease-in-out;
 				}
@@ -112,15 +116,15 @@ section {
 	}
 
 	.navbar__burger {
-		width: 3em;
+		width: 3rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 0.5rem;
-		padding: 0.5em;
+		padding: 0.5rem;
 		cursor: pointer;
 		background-color: transparent;
-		border-radius: 0.2em;
+		border-radius: 0.2rem;
 
 		.navbar__burger__bar {
 			display: block;
@@ -131,7 +135,7 @@ section {
 		}
 
 		.navbar__burger--opened {
-			margin-block-end: 2em;
+			margin-block-end: 2rem;
 		}
 
 		.navbar__burger__bar-1--close {
@@ -195,12 +199,12 @@ section {
 			background: var(--fallback-gradient);
 			color: transparent;
 			background-clip: text;
-			font-size: 3.5em;
+			font-size: 3.5rem;
 			font-weight: 600;
 		}
 
 		cite {
-			font-size: 2.5em;
+			font-size: 2.5rem;
 		}
 	}
 }
@@ -211,7 +215,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 3em;
+	gap: 3rem;
 	background-color: var(--secondary-color);
 
 	.about__heading {
@@ -219,7 +223,7 @@ section {
 	}
 
 	.about__img {
-		width: 20em;
+		width: 20rem;
 		mix-blend-mode: multiply;
 		animation: up-down 1.5s ease-in-out infinite forwards;
 	}
@@ -234,7 +238,7 @@ section {
 	min-height: 100vh;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	gap: 3em;
+	gap: 3rem;
 
 	.products__svg {
 		background-color: var(--primary-color);
@@ -246,12 +250,12 @@ section {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 3em;
+		gap: 3rem;
 
 		.products__list__item {
 			width: fit-content;
-			max-width: 21em;
-			padding: 2em 1.5em;
+			max-width: 21rem;
+			padding: 2rem 1.5rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -263,36 +267,36 @@ section {
 			transition: box-shadow 0.4s ease-in-out;
 
 			&:hover {
-				box-shadow: 0.7em 0.7em 0.5em var(--fallback-color);
+				box-shadow: 0.7rem 0.7rem 0.5rem var(--fallback-color);
 			}
 
 			.products__list__item__img {
-				border-radius: 0.5em;
+				border-radius: 0.5rem;
 				filter: grayscale();
 			}
 
 			.products__list__item__info--wrapper {
 				display: flex;
 				flex-direction: column;
-				gap: 0.5em;
+				gap: 0.5rem;
 				height: 100%;
-				padding-block: 2em;
+				padding-block: 2rem;
 				background-color: var(--secondary-color);
 
 				.products__list__item__heading {
-					padding: 0.5em;
-					font-size: 1.5em;
+					padding: 0.5rem;
+					font-size: 1.5rem;
 					font-weight: 600;
 					color: var(--fallback-color);
 				}
 
 				.products__list__item__price {
 					font-weight: 600;
-					font-size: 1.2em;
+					font-size: 1.2rem;
 				}
 
 				.products__list__item__summery {
-					font-size: 1em;
+					font-size: 1rem;
 				}
 			}
 
@@ -355,41 +359,41 @@ section {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	gap: 3em;
+	gap: 3rem;
 	background-color: var(--secondary-color);
 
 	.testimonials__img {
-		width: 22em;
+		width: 22rem;
 		mix-blend-mode: multiply;
 		animation: up-down 1.5s ease-in-out infinite forwards;
 	}
 
 	.testimonials__cards {
 		width: 90%;
-		max-width: 60em;
-		max-height: 35em;
+		max-width: 60rem;
+		max-height: 35rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 1.5em;
-		padding-block: 2em;
+		gap: 1.5rem;
+		padding-block: 2rem;
 		overflow: auto;
 
 		.testimonials__card {
-			min-width: 20em;
-			padding: 2em;
+			min-width: 20rem;
+			padding: 2rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
-			gap: 1.5em;
+			gap: 1.5rem;
 			overflow-y: auto;
-			border-radius: 1em;
+			border-radius: 1rem;
 			background-color: var(--primary-color);
 
 			.testimonials__card__author {
-				font-size: 1.5em;
+				font-size: 1.5rem;
 				font-weight: 600;
 				background: var(--fallback-gradient);
 				color: transparent;
@@ -398,7 +402,7 @@ section {
 
 			.testimonials__card__feedback {
 				color: var(--secondary-color);
-				font-size: 0.9em;
+				font-size: 0.9rem;
 			}
 		}
 	}
@@ -416,7 +420,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	gap: 1em;
+	gap: 1rem;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 
@@ -426,19 +430,19 @@ section {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 2em;
+		gap: 2rem;
 	}
 
 	.contact-us__form {
 		width: 100%;
-		max-width: 32em;
+		max-width: 32rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 2em;
-		padding: 1em;
-		border-radius: 1em;
+		gap: 2rem;
+		padding: 1rem;
+		border-radius: 1rem;
 		color: var(--secondary-color);
 
 		.contact-us__form__set {
@@ -446,22 +450,22 @@ section {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			gap: 1.5em;
+			gap: 1.5rem;
 
 			.contact-us__form__set__title {
 				width: 100%;
-				padding-block: 1.5em;
-				font-size: 1.5em;
+				padding-block: 1.5rem;
+				font-size: 1.5rem;
 				font-weight: 600;
 
 				&::after {
 					display: block;
 					content: "";
 					width: 100%;
-					height: 0.1em;
-					margin-block-start: 0.6em;
+					height: 0.1rem;
+					margin-block-start: 0.6rem;
 					background: var(--fallback-gradient);
-					border-radius: 0.5em;
+					border-radius: 0.5rem;
 				}
 			}
 
@@ -470,19 +474,19 @@ section {
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
-				gap: 1em;
+				gap: 1rem;
 
 				.contact-us__form__label {
-					font-size: 1.1em;
+					font-size: 1.1rem;
 					font-weight: 600;
 				}
 
 				.contact-us__form__input {
-					padding: 1em;
-					border-radius: 0.5em;
+					padding: 1rem;
+					border-radius: 0.5rem;
 					color: var(--secondary-color);
 					background-color: var(--primary-color);
-					border: 0.1em solid var(--secondary-color);
+					border: 0.1rem solid var(--secondary-color);
 					transition: all 0.2s ease-in-out;
 
 					&::placeholder {
@@ -502,10 +506,11 @@ section {
 		align-items: flex-start;
 
 		.contact-us__form {
-			padding: 0 3em;
+			padding: 0 3rem;
 		}
 
-		.contact-us__section-info--wrapper {
+		.contact-us__section-info--wrapper,
+		.contact-us__form {
 			width: 50%;
 		}
 	}
@@ -521,18 +526,18 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2.5em;
-	gap: 1.5em;
+	padding: 2.5rem;
+	gap: 1.5rem;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 
 	.footer__heading {
-		font-size: 2em;
+		font-size: 2rem;
 	}
 
 	a {
 		color: var(--primary-color);
-		font-size: 1.1em;
+		font-size: 1.1rem;
 
 		&:hover {
 			font-weight: 600;
@@ -543,7 +548,7 @@ section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 1em;
+		gap: 1rem;
 	}
 
 	.footer__website-maker a {
