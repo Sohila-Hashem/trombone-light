@@ -15,4 +15,5 @@ static responsive landing page for trombones, consisting of 5 sections:
 -   HTML
 -   CSS
 -   JavaScript
+
     > used cssnano to minify the main css file

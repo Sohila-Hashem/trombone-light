@@ -4,7 +4,7 @@
 	"description": "static responsive landing page for trombones, consisting of 5 sections:",
 	"main": "postcss.config.js",
 	"scripts": {
-		"minify-css": "npx postcss css/style.css > css/main.css"
+		"minify-css": "npx postcss css/style-dev.css > css/style.css"
 	},
 	"author": "",
 	"license": "ISC",
