@@ -3,24 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="description"
+			content="Trombone website to sell 3 popular trombone products of valve trombone, tenor trombone and bass trombone "
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#002d2d" />
 		<!--rendering google fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Cinzel&family=IBM+Plex+Sans:wght@200;400&family=Inconsolata:wght@200&family=Neonderthaw&family=Old+Standard+TT&family=Philosopher&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
 			rel="stylesheet"
-		/>
-		<!-- font awesome CDN -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		/>
 		<!-- css reset stylesheet-->
 		<link rel="stylesheet" href="css/reset.css" />
 		<!-- css components stylesheet-->
 		<link rel="stylesheet" href="css/components.css" />
 		<!--rendering the main css file -->
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/style-dev.css" />
 		<title>Trombone Light</title>
 	</head>
 	<body>
@@ -84,13 +85,14 @@
 
 		<!-- header section -->
 		<header id="header" class="header" aria-label="header">
-			<img
-				class="header__img"
-				src="images/header.png"
-				alt="banner image"
-				aria-hidden="true"
-				loading="lazy"
-			/>
+			<picture aria-hidden="true">
+				<img
+					class="header__img"
+					src="images/header.webp"
+					alt="banner image"
+					loading="lazy"
+				/>
+			</picture>
 
 			<blockquote class="header__heading">
 				<p id="quote author">music is life itself</p>
@@ -116,13 +118,15 @@
 				perferendis ducimus nesciunt pariatur temporibus excepturi earum? Autem fugit,
 			</p>
 
-			<img
-				class="about__img"
-				src="images/about.png"
-				alt="avatar"
-				aria-hidden="true"
-				loading="lazy"
-			/>
+			<picture aria-hidden="true">
+				<img
+					class="about__img"
+					src="./images/about.webp"
+					alt="avatar image used for graphics only"
+					loading="lazy"
+					class="about__img"
+				/>
+			</picture>
 		</section>
 
 		<svg
@@ -166,12 +170,14 @@
 					aria-label="product"
 					aria-describedby="tenor__list__item__summery"
 				>
-					<img
-						class="products__list__item__img"
-						src="images/tenor.jpg"
-						alt="tenor Trombone"
-						loading="lazy"
-					/>
+					<picture>
+						<img
+							class="products__list__item__img"
+							src="./images/tenor.webp"
+							alt="tenor trombone"
+							loading="lazy"
+						/>
+					</picture>
 
 					<div class="products__list__item__info--wrapper">
 						<h2 id="tenor__list__item__heading" class="products__list__item__heading">
@@ -198,12 +204,14 @@
 					aria-label="product"
 					aria-describedby="bass__list__item__summery"
 				>
-					<img
-						class="products__list__item__img"
-						src="images/bass.jpg"
-						alt="bass Trombone"
-						loading="lazy"
-					/>
+					<picture>
+						<img
+							class="products__list__item__img"
+							src="./images/bass.webp"
+							alt="bass trombone"
+							loading="lazy"
+						/>
+					</picture>
 
 					<div class="products__list__item__info--wrapper">
 						<h2 id="bass__list__item__heading" class="products__list__item__heading">
@@ -230,12 +238,14 @@
 					aria-label="product"
 					aria-describedby="valve__list__item__summery"
 				>
-					<img
-						class="products__list__item__img"
-						src="images/valve.jpg"
-						alt="valve Trombone"
-						loading="lazy"
-					/>
+					<picture>
+						<img
+							class="products__list__item__img"
+							src="./images/valve.webp"
+							alt="valve trombone"
+							loading="lazy"
+						/>
+					</picture>
 
 					<div class="products__list__item__info--wrapper">
 						<h2 id="valve__list__item__heading" class="products__list__item__heading">
@@ -279,13 +289,14 @@
 				<span aria-hidden="true" class="section__heading__icon">&#9834;</span>
 			</h1>
 
-			<img
-				class="testimonials__img"
-				src="images/testimonials.png"
-				alt="avatar"
-				aria-hidden="true"
-				loading="lazy"
-			/>
+			<picture aria-hidden="true">
+				<img
+					class="testimonials__img"
+					src="./images/testimonials.webp"
+					alt="avatar image used for graphics only"
+					loading="lazy"
+				/>
+			</picture>
 
 			<ul class="testimonials__cards" aria-label="testimonials">
 				<li class="testimonials__card" aria-label="testimonial card">
@@ -502,7 +513,7 @@
 		</svg>
 
 		<!-- footer section -->
-		<footer class="footer">
+		<footer class="footer" aria-label="footer">
 			<h1 class="section__heading footer__heading">
 				find us on social media
 				<span aria-hidden="true" class="section__heading__icon" aria-hidden="true"
@@ -512,31 +523,52 @@
 
 			<menu class="footer__social-media" role="menu" aria-label="social-media links menu">
 				<li class="footer__social-media__item" role="menuitem">
-					<a href="#" class="footer__social-media__link">
-						facbook
-						<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-					</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 320 512"
+						class="icon"
+						aria-hidden="true"
+					>
+						<path
+							d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+						/>
+					</svg>
+					<a href="#" class="footer__social-media__link"> facbook </a>
 				</li>
 				<li class="footer__social-media__item" role="menuitem">
-					<a href="#" class="footer__social-media__link">
-						instagram
-						<i class="fab fa-instagram" aria-hidden="true"></i>
-					</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 448 512"
+						class="icon"
+						aria-hidden="true"
+					>
+						<path
+							d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+						/>
+					</svg>
+					<a href="#" class="footer__social-media__link"> instagram </a>
 				</li>
 				<li class="footer__social-media__item" role="menuitem">
-					<a href="#" class="footer__social-media__link">
-						twitter
-						<i class="fa-brands fa-twitter" aria-hidden="true"></i>
-					</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 512 512"
+						class="icon"
+						aria-hidden="true"
+					>
+						<path
+							d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+						/>
+					</svg>
+					<a href="#" class="footer__social-media__link"> twitter </a>
 				</li>
 			</menu>
 
-			<span class="footer__website-maker"
+			<span class="footer__website-maker" aria-hidden="true"
 				>Made by <a href="https://github.com/Sohila-Hashem">Storm</a></span
 			>
 			<span aria-hidden="true">&copy; 2024</span>
 		</footer>
 
-		<script src="js/app.js" defer></script>
+		<script src="js/app-dev.js" defer></script>
 	</body>
 </html>
